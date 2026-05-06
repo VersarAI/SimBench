@@ -121,15 +121,6 @@ If a task does not require Sim-aware arbitration, it is not suitable for SimBenc
 
 ---
 
-## Relation to the Paper
-
-These tasks operationalize the paper’s central claim:
-
-> **Structured, typed, multi-context user representations enable better agent planning than flat user profiles or retrieval-based personalization.**
-
-SimBench tasks isolate *preference-conditioned planning* as a first-class evaluation target—distinct from general agent capability or task completion alone.
-
----
 
 ## Notes
 

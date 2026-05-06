@@ -107,19 +107,6 @@ When extending this set:
 
 If a change would invalidate previously scored results, treat it as a **new benchmark version**.
 
-**Relation to the Paper**
-
-These users operationalize the paper’s core claim:
-
-*Structured, typed, multi**context user representations enable better preference**conditioned agentic planning than flat or unstructured profiles.*
-
-They are deliberately **small in number but high in reuse**, enabling:
-
-- controlled ablations,
-
-- conflictspecific analysis,
-
-- interpretable errors.
 
 **Notes**
 

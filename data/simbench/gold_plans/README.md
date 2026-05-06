@@ -80,15 +80,6 @@ Any change that alters expected behavior (e.g., changing a constraint from soft 
 
 ---
 
-## Relation to the Paper
-
-Gold plans operationalize the paper’s core evaluation claim:
-
-> Preference‑conditioned agent behavior can be evaluated by comparing structured plans against explicit, Sim‑aware reference decisions.
-
-They enable **fine‑grained analysis** of where and how agent outputs deviate from user‑consistent behavior.
-
----
 
 ## Notes
 
