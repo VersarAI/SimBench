@@ -196,6 +196,22 @@ All users and scenarios are synthetic. No real personal data is used.
 
 ---
 
+## Citation
+
+If you use SimBench in your research, please cite:
+
+```bibtex
+@misc{shah2026simbench,
+  author       = {Chirag Shah},
+  title        = {{SimBench}: A Benchmark for Preference-Conditioned Agentic Planning},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/VersarAI/SimBench}},
+}
+```
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
