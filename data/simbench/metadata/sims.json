@@ -1,0 +1,380 @@
+{
+  "jordan_work": {
+    "sim_id": "jordan_work",
+    "sim_type": "work",
+    "priorities": [
+      {
+        "name": "cost_efficiency",
+        "weight": 0.4
+      },
+      {
+        "name": "schedule_density",
+        "weight": 0.35
+      },
+      {
+        "name": "loyalty_programs",
+        "weight": 0.25
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "preferred_airlines",
+        "description": "Flights must use preferred airlines when possible.",
+        "severity": "soft"
+      },
+      {
+        "constraint_id": "expense_policy",
+        "description": "Stay within corporate travel expense limits.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "formal and concise",
+    "notes": "Management consultant at a large firm."
+  },
+  "jordan_health": {
+    "sim_id": "jordan_health",
+    "sim_type": "health",
+    "priorities": [
+      {
+        "name": "sleep_quality",
+        "weight": 0.6
+      },
+      {
+        "name": "exercise_access",
+        "weight": 0.4
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "no_red_eye",
+        "description": "Avoid red-eye flights.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "evening_only_workouts",
+        "description": "Only schedule exercise sessions after 5pm local time. No early morning gym sessions.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "brief and practical",
+    "notes": "Training for a marathon."
+  },
+  "jordan_family": {
+    "sim_id": "jordan_family",
+    "sim_type": "family",
+    "priorities": [
+      {
+        "name": "time_at_home",
+        "weight": 0.7
+      },
+      {
+        "name": "predictable_schedule",
+        "weight": 0.3
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "school_pickup",
+        "description": "Must be home by Friday 3pm for school pickup.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "no_thursday_friday_travel",
+        "description": "Cannot travel on Thursdays or Fridays during school holiday weeks.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "warm and reassuring",
+    "notes": "Parent of two school-age children."
+  },
+  "jordan_hobby": {
+    "sim_id": "jordan_hobby",
+    "sim_type": "hobby",
+    "priorities": [
+      {
+        "name": "scenic_opportunities",
+        "weight": 0.6
+      },
+      {
+        "name": "golden_hour_timing",
+        "weight": 0.4
+      }
+    ],
+    "constraints": [],
+    "communication_style": "enthusiastic and detailed",
+    "notes": "Amateur photographer."
+  },
+  "jordan_finance": {
+    "sim_id": "jordan_finance",
+    "sim_type": "finance",
+    "priorities": [
+      {
+        "name": "budget_adherence",
+        "weight": 1.0
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "hotel_budget_ceiling",
+        "description": "Hotels must not exceed $200 per night.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "flight_budget_ceiling",
+        "description": "Domestic flights must not exceed $500; international flights must not exceed $1200.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "corporate_account_only",
+        "description": "All bookings must go through corporate travel accounts to earn loyalty points.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "analytical and detail-focused",
+    "notes": "Finance-conscious, manages corporate spending closely."
+  },
+  "samir_research": {
+    "sim_id": "samir_research",
+    "sim_type": "work",
+    "priorities": [
+      {
+        "name": "data_quality",
+        "weight": 0.6
+      },
+      {
+        "name": "reproducibility",
+        "weight": 0.4
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "irb_approval",
+        "description": "All human subject research requires IRB (Institutional Review Board) approval before any data collection. Cannot proceed without approval certificate.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "technical and careful",
+    "notes": "Academic researcher."
+  },
+  "samir_privacy": {
+    "sim_id": "samir_privacy",
+    "sim_type": "privacy",
+    "priorities": [
+      {
+        "name": "data_minimization",
+        "weight": 1.0
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "no_third_party_sharing",
+        "description": "Do not share personal data with third-party services.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "local_storage_only",
+        "description": "Data must be stored locally or in university-approved, GDPR-compliant systems. No cloud storage (AWS, Google Drive, DropBox, OneDrive).",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "reserved",
+    "notes": "Highly privacy-conscious."
+  },
+  "samir_ethics": {
+    "sim_id": "samir_ethics",
+    "sim_type": "work",
+    "priorities": [
+      {
+        "name": "participant_consent",
+        "weight": 0.7
+      },
+      {
+        "name": "transparency",
+        "weight": 0.3
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "explicit_informed_consent",
+        "description": "All research participants must provide written informed consent. Cannot use service agreements as substitute consent forms.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "ethics_review_timeline",
+        "description": "Must budget 8-12 weeks minimum for IRB review before data collection. Cannot rush ethics review process.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "principled and cautious",
+    "notes": "Committed to ethical research practice."
+  },
+  "emily_professional": {
+    "sim_id": "emily_professional",
+    "sim_type": "work",
+    "priorities": [
+      {
+        "name": "clarity",
+        "weight": 0.5
+      },
+      {
+        "name": "professional_tone",
+        "weight": 0.5
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "business_venues_only",
+        "description": "All professional meetings must occur in business-appropriate settings (offices, hotels, conference centers). No casual venues (bars, coffee shops, parks).",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "formal and polished",
+    "notes": "Senior corporate role."
+  },
+  "emily_personal": {
+    "sim_id": "emily_personal",
+    "sim_type": "family",
+    "priorities": [
+      {
+        "name": "warmth",
+        "weight": 1.0
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "emily_mother_appointments",
+        "description": "Must accompany mother to neurology appointments on the second Tuesday of each month, 2-4pm. Cannot schedule travel or external meetings during this window.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "emily_evening_availability",
+        "description": "Must be reachable by phone after 7pm on weekdays in case of mother's health incidents. Cannot attend multi-day off-site events without arranging a designated emergency contact.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "friendly and personal",
+    "notes": "Close relationships outside work. Primary family contact for mother's medical care."
+  },
+  "emily_mentoring": {
+    "sim_id": "emily_mentoring",
+    "sim_type": "work",
+    "priorities": [
+      {
+        "name": "mentee_development",
+        "weight": 0.8
+      },
+      {
+        "name": "career_succession",
+        "weight": 0.2
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "mentee_availability",
+        "description": "Must dedicate 2 evenings per week for mentee check-ins and one-on-ones (uninterrupted 1-hour slots, 5pm onwards).",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "mentorship_events",
+        "description": "Must attend at least 4 women-in-leadership conferences or mentorship summit events per year.",
+        "severity": "soft"
+      }
+    ],
+    "communication_style": "encouraging and thorough",
+    "notes": "Active mentor for junior female leaders. Executive sponsor of diversity initiatives."
+  },
+  "diana_work": {
+    "sim_id": "diana_work",
+    "sim_type": "work",
+    "priorities": [
+      {
+        "name": "institutional_reputation",
+        "weight": 0.6
+      },
+      {
+        "name": "operational_efficiency",
+        "weight": 0.4
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "monthly_board_meeting_last_thursday",
+        "description": "Must attend monthly board meetings on the last Thursday of each month.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "official_external_channels_only",
+        "description": "All external communications must go through official hospital channels.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "committee_signoff_above_50k",
+        "description": "Cannot make unilateral decisions above $50K without committee sign-off.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "authoritative and measured",
+    "notes": "Senior hospital administrator reporting directly to the hospital CEO. High public visibility role."
+  },
+  "diana_caregiving": {
+    "sim_id": "diana_caregiving",
+    "sim_type": "family",
+    "priorities": [
+      {
+        "name": "mothers_safety",
+        "weight": 0.7
+      },
+      {
+        "name": "continuity_of_routine",
+        "weight": 0.3
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "medication_8am_8pm_daily",
+        "description": "Mother requires medication administration at 8am and 8pm daily and this cannot be delegated without a qualified substitute arranged in advance.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "no_overnight_travel_without_replacement",
+        "description": "Cannot travel overnight without confirming a qualified caregiver replacement.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "max_three_consecutive_nights_away",
+        "description": "No back-to-back travel days exceeding 3 consecutive nights away.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "patient and protective",
+    "notes": "Mother has early-stage dementia and routine disruption causes significant distress. Diana is the sole family caregiver in the city."
+  },
+  "diana_personal": {
+    "sim_id": "diana_personal",
+    "sim_type": "health",
+    "priorities": [
+      {
+        "name": "stress_management",
+        "weight": 0.6
+      },
+      {
+        "name": "professional_longevity",
+        "weight": 0.4
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "weekly_therapy_wednesday_8_9am",
+        "description": "Must attend weekly therapy session on Wednesday mornings 8-9am as a non-negotiable standing appointment.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "no_high_stakes_during_therapy_window",
+        "description": "No scheduling of high-stakes meetings or travel during the Wednesday 8-9am therapy window.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "reflective and boundaried",
+    "notes": "Actively managing caregiver burnout. Therapy is non-negotiable self-preservation, not optional wellness."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "task_id": "research_rafael_destination_review",
+  "domain": "research",
+  "description": "Rafael Silva must evaluate three destination options. Budget per destination is $200 maximum. However, the cheapest option (Las Vegas-style tourist trap) relies on mass-market, non-local tourism. The sustainable alternatives cost 40% more. TRAP: No-profile agent picks cheapest destination without checking for eco-certification requirement.",
+  "active_sims": ["rafael_explorer", "rafael_budget", "rafael_sustainability"],
+  "available_tools": ["research_database", "budget_calculator", "itinerary_builder"],
+  "conflict_types": ["financial_vs_ethical_conflict", "destination_selection_conflict"],
+  "difficulty": "hard"
+}

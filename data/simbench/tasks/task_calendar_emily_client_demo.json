@@ -1,0 +1,9 @@
+{
+  "task_id": "calendar_emily_client_demo",
+  "domain": "calendar",
+  "description": "Schedule Emily Zhao's high-priority client demo (requires formal business setting) and handle her evening mentee check-in commitments. The client is available only in evenings (6-8pm). TRAP: No-profile agent will overlook Emily's mandatory 2 evenings/week mentoring commitment.",
+  "active_sims": ["emily_professional", "emily_personal", "emily_mentoring"],
+  "available_tools": ["calendar_view", "notification_service", "meeting_scheduler"],
+  "conflict_types": ["venue_constraint_conflict", "time_availability_conflict"],
+  "difficulty": "medium"
+}

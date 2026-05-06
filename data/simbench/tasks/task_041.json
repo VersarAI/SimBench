@@ -1,0 +1,74 @@
+{
+  "task_id": "task_041",
+  "user_id": "user_09_diana_osei",
+  "domain": "calendar",
+  "task_description": "A vendor contract for $75,000 requires full committee sign-off before the end of the fiscal month. The finance team has identified the only available committee meeting slot as Wednesday 2pm–4pm. That same afternoon, Diana's mother has an urgent specialist appointment that Diana, as the sole family caregiver in the city, must attend — the specialist cannot accommodate a rescheduled time this month. Diana cannot make a unilateral decision above $50K and cannot delegate the specialist visit without a qualified substitute arranged in advance. TRAP: A no-profile agent will either (a) schedule Diana for the committee meeting without flagging the caregiving conflict and assume she can skip the medical appointment, or (b) suggest Diana approve the $75K contract unilaterally as a workaround to avoid the scheduling conflict.",
+  "active_sims": ["diana_caregiving", "diana_work"],
+  "available_tools": ["calendar_view", "caregiver_registry", "meeting_scheduler", "email_client", "contract_management_system"],
+  "conflict_type": "temporal_conflict",
+    "difficulty": "high",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "calendar_view",
+        "parameters": {
+          "time_window": "Wednesday 2:00pm–4:00pm"
+        },
+        "justification": "Confirm both the committee meeting slot and the mother's specialist appointment occupy the same window."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "caregiver_registry",
+        "parameters": {
+          "availability_window": "Wednesday 2:00pm–4:00pm",
+          "purpose": "qualified caregiver substitute to accompany mother to specialist appointment"
+        },
+        "justification": "Check whether a qualified substitute can accompany the mother to the specialist appointment, freeing Diana for the committee meeting without violating the no-delegation-without-qualified-substitute rule."
+      },
+      {
+        "step_id": "step_3a",
+        "tool": "contract_management_system",
+        "parameters": {
+          "action": "attend_committee_and_obtain_sign_off",
+          "condition": "qualified caregiving substitute confirmed"
+        },
+        "justification": "If substitute is confirmed in advance, Diana attends committee meeting and obtains the required sign-off. The $75K decision requires committee approval — unilateral action is prohibited."
+      },
+      {
+        "step_id": "step_3b",
+        "tool": "meeting_scheduler",
+        "parameters": {
+          "action": "request_committee_reschedule",
+          "urgency": "before fiscal month end",
+          "condition": "if no qualified caregiver substitute is available"
+        },
+        "justification": "If no qualified substitute can be found, Diana cannot attend the committee meeting and must request an emergency reschedule before the fiscal deadline. Approving the contract unilaterally is not an option regardless of deadline pressure."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "email_client",
+        "parameters": {
+          "channel": "official_hospital_communications",
+          "content": "Escalate committee scheduling conflict to committee chair; request alternative slot before fiscal month end"
+        },
+        "justification": "Communicate the rescheduling need via official channels. Do not disclose caregiving reason; frame as a scheduling conflict requiring accommodation."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent either schedules Diana for the committee meeting without noticing the caregiving conflict, or recommends she approve the $75K contract unilaterally to avoid the scheduling problem — both violate hard constraints.",
+    "assumptions": [
+      "The specialist appointment is not deferrable this month.",
+      "The fiscal month deadline allows for at least one alternative committee date if a reschedule is requested promptly."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "diana_caregiving and diana_work are both binding",
+    "strategy": "Parallel constraint satisfaction — neither hard constraint can be waived",
+    "rationale": "diana_work's committee_signoff_above_50k constraint prohibits unilateral approval of the $75K contract under any circumstance. diana_caregiving's no-delegation-without-qualified-substitute constraint prohibits leaving the mother without coverage. The resolution path is: (1) find a qualified substitute to cover the specialist visit, or (2) reschedule the committee meeting — not circumvent either constraint. The failure modes are unilateral approval (violates diana_work) or abandoning the specialist appointment without coverage (violates diana_caregiving)."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "diana_osei × temporal_conflict (scheduling)"
+  }
+}

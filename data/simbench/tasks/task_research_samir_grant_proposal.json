@@ -1,0 +1,9 @@
+{
+  "task_id": "research_samir_grant_proposal",
+  "domain": "research",
+  "description": "Outline Samir Patel’s grant proposal approach with strong privacy safeguards built into the research design.",
+  "active_sims": ["samir_research", "samir_privacy"],
+  "available_tools": ["document_editor", "funding_portal", "compliance_checker"],
+  "conflict_types": ["communication_conflict"],
+  "difficulty": "high"
+}

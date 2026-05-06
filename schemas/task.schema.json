@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SimBenchTask",
+  "description": "A single task instance in SimBench.",
+  "type": "object",
+  "required": [
+    "task_id",
+    "domain",
+    "description",
+    "active_sims",
+    "available_tools",
+    "conflict_types",
+    "difficulty"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Unique identifier for the task."
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["travel", "calendar", "communication", "research"],
+      "description": "Task domain."
+    },
+    "description": {
+      "type": "string",
+      "description": "Natural language task description given to the agent."
+    },
+    "active_sims": {
+      "type": "array",
+      "description": "Ordered list of active Sim IDs (highest priority first).",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "available_tools": {
+      "type": "array",
+      "description": "Abstract tools the agent may plan to use.",
+      "items": { "type": "string" }
+    },
+    "conflict_types": {
+      "type": "array",
+      "description": "Explicit conflict categories present in this task.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "priority_conflict",
+          "constraint_conflict",
+          "communication_conflict",
+          "temporal_conflict",
+          "none"
+        ]
+      }
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    }
+  },
+  "additionalProperties": false
+}

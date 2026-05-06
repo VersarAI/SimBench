@@ -1,0 +1,46 @@
+{
+  "plan_id": "gold_jordan_calendar_weekend_return_v1",
+  "steps": [
+    {
+      "step_id": "step_1",
+      "tool": "calendar_view",
+      "parameters": {
+        "time_window": "Thursday 12:00 - Friday 18:00"
+      },
+      "justification": "Identify meetings that conflict with Friday early departure."
+    },
+    {
+      "step_id": "step_2",
+      "tool": "meeting_rescheduler",
+      "parameters": {
+        "criteria": {
+          "conflicting_events": "Friday after 12:00",
+          "reschedule_priority": [
+            "optional_attendance",
+            "internal_meetings",
+            "external_meetings"
+          ],
+          "preferred_new_times": "Earlier Thursday or following Monday"
+        }
+      },
+      "justification": "Minimize disruption while ensuring early Friday availability."
+    },
+    {
+      "step_id": "step_3",
+      "tool": "meeting_rescheduler",
+      "parameters": {
+        "action": "confirm_reschedules",
+        "notify_participants": true
+      },
+      "justification": "Finalize changes and communicate updates."
+    }
+  ],
+  "assumptions": [
+    "Meetings can be rescheduled with sufficient notice.",
+    "Internal meetings are more flexible than external client meetings."
+  ],
+  "conflict_resolution": {
+    "strategy": "Hard constraint override",
+    "rationale": "The Family-Sim constraint to be home by Friday 3pm is hard and therefore supersedes work-related scheduling preferences."
+  }
+}

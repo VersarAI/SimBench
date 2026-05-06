@@ -1,0 +1,9 @@
+{
+  "task_id": "travel_alexa_weekend_getaway",
+  "domain": "travel",
+  "description": "Plan Alexa Morgan’s two-day weekend getaway that supports her recovery goals while keeping work flexibility available.",
+  "active_sims": ["alexa_health", "alexa_work"],
+  "available_tools": ["travel_planner", "fitness_scheduler", "hotel_booking"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "medium"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "sim_id": "miguel_academic",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "research_quality", "weight": 0.6 },
+      { "name": "advisor_alignment", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "weekly_advisor_meetings",
+        "description": "Must attend weekly in-person or video advisor meetings. Cannot reschedule more than twice per month.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "precise and academic",
+    "notes": "PhD student in computer science."
+  },
+  {
+    "sim_id": "miguel_budget",
+    "sim_type": "finance",
+    "priorities": [
+      { "name": "minimize_cost", "weight": 1.0 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "monthly_budget",
+        "description": "Monthly discretionary spending must stay under budget.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "budget_accommodation",
+        "description": "Only hostels or university-affiliated dorms. No hotels above $60/night.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "practical",
+    "notes": "Lives on a fixed stipend."
+  },
+  {
+    "sim_id": "miguel_conferences",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "publication_visibility", "weight": 0.7 },
+      { "name": "deadline_compliance", "weight": 0.3 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "conference_deadlines",
+        "description": "Must submit to ACM SIGCOMM, NSDI, or similar tier-1 conference. Paper submission deadline is non-negotiable; travel must complete 2 weeks before conference.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "travel_for_presentations",
+        "description": "If paper accepted, must attend conference in-person to present. Business class or economy flights only.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "detail-oriented",
+    "notes": "Needs conference exposure for PhD job market."
+  }
+]

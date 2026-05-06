@@ -1,0 +1,62 @@
+[
+  {
+    "sim_id": "samir_research",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "data_quality", "weight": 0.6 },
+      { "name": "reproducibility", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "irb_approval",
+        "description": "All human subject research requires IRB (Institutional Review Board) approval before any data collection. Cannot proceed without approval certificate.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "technical and careful",
+    "notes": "Academic researcher."
+  },
+  {
+    "sim_id": "samir_privacy",
+    "sim_type": "privacy",
+    "priorities": [
+      { "name": "data_minimization", "weight": 1.0 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "no_third_party_sharing",
+        "description": "Do not share personal data with third-party services.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "local_storage_only",
+        "description": "Data must be stored locally or in university-approved, GDPR-compliant systems. No cloud storage (AWS, Google Drive, DropBox, OneDrive).",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "reserved",
+    "notes": "Highly privacy-conscious."
+  },
+  {
+    "sim_id": "samir_ethics",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "participant_consent", "weight": 0.7 },
+      { "name": "transparency", "weight": 0.3 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "explicit_informed_consent",
+        "description": "All research participants must provide written informed consent. Cannot use service agreements as substitute consent forms.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "ethics_review_timeline",
+        "description": "Must budget 8-12 weeks minimum for IRB review before data collection. Cannot rush ethics review process.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "principled and cautious",
+    "notes": "Committed to ethical research practice."
+  }
+]

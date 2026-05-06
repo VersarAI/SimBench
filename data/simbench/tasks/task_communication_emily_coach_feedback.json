@@ -1,0 +1,9 @@
+{
+  "task_id": "communication_emily_coach_feedback",
+  "domain": "communication",
+  "description": "Emily Zhao must draft feedback to a coaching partner. She maintains strict separation between professional (formal venues only) and personal (mentoring for junior leaders) spheres. The coach expects a response during typical coaching hours (5-7pm). TRAP: No-profile agent won't know evenings are blocked for mandatory mentee check-ins.",
+  "active_sims": ["emily_professional", "emily_personal", "emily_mentoring"],
+  "available_tools": ["email_client", "note_taking_app", "calendar_view"],
+  "conflict_types": ["communication_style_conflict", "time_block_conflict"],
+  "difficulty": "medium"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "sim_id": "noah_remote_work",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "reliable_internet", "weight": 0.6 },
+      { "name": "time_zone_overlap", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "internet_speed",
+        "description": "Work location must have minimum 30 Mbps download, 10 Mbps upload. Cannot work from locations with degraded connectivity.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "clear and asynchronous",
+    "notes": "Fully remote employee."
+  },
+  {
+    "sim_id": "noah_logistics",
+    "sim_type": "personal",
+    "priorities": [
+      { "name": "delivery_reliability", "weight": 1.0 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "secure_delivery",
+        "description": "Packages must be delivered securely.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "relocation_freeze",
+        "description": "Cannot relocate during active sprint cycles (2-week development sprints). Must relocate on weekends only when not in sprint.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "practical",
+    "notes": "Moves frequently."
+  },
+  {
+    "sim_id": "noah_connectivity",
+    "sim_type": "personal",
+    "priorities": [
+      { "name": "network_stability", "weight": 0.8 },
+      { "name": "location_reliability", "weight": 0.2 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "settled_location",
+        "description": "Must remain at same location for minimum 4 weeks to ensure network stability and package delivery. Cannot move more than once per month.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "backup_internet",
+        "description": "New location must have backup mobile hotspot coverage (4G/5G as failover).",
+        "severity": "soft"
+      }
+    ],
+    "communication_style": "practical",
+    "notes": "Values stability for work continuity despite moving frequently."
+  }
+]

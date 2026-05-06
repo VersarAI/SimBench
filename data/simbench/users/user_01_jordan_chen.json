@@ -1,0 +1,106 @@
+[
+  {
+    "sim_id": "jordan_work",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "cost_efficiency", "weight": 0.4 },
+      { "name": "schedule_density", "weight": 0.35 },
+      { "name": "loyalty_programs", "weight": 0.25 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "preferred_airlines",
+        "description": "Flights must use preferred airlines when possible.",
+        "severity": "soft"
+      },
+      {
+        "constraint_id": "expense_policy",
+        "description": "Stay within corporate travel expense limits.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "formal and concise",
+    "notes": "Management consultant at a large firm."
+  },
+  {
+    "sim_id": "jordan_health",
+    "sim_type": "health",
+    "priorities": [
+      { "name": "sleep_quality", "weight": 0.6 },
+      { "name": "exercise_access", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "no_red_eye",
+        "description": "Avoid red-eye flights.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "evening_only_workouts",
+        "description": "Only schedule exercise sessions after 5pm local time. No early morning gym sessions.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "brief and practical",
+    "notes": "Training for a marathon."
+  },
+  {
+    "sim_id": "jordan_family",
+    "sim_type": "family",
+    "priorities": [
+      { "name": "time_at_home", "weight": 0.7 },
+      { "name": "predictable_schedule", "weight": 0.3 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "school_pickup",
+        "description": "Must be home by Friday 3pm for school pickup.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "no_thursday_friday_travel",
+        "description": "Cannot travel on Thursdays or Fridays during school holiday weeks.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "warm and reassuring",
+    "notes": "Parent of two school-age children."
+  },
+  {
+    "sim_id": "jordan_hobby",
+    "sim_type": "hobby",
+    "priorities": [
+      { "name": "scenic_opportunities", "weight": 0.6 },
+      { "name": "golden_hour_timing", "weight": 0.4 }
+    ],
+    "constraints": [],
+    "communication_style": "enthusiastic and detailed",
+    "notes": "Amateur photographer."
+  },
+  {
+    "sim_id": "jordan_finance",
+    "sim_type": "finance",
+    "priorities": [
+      { "name": "budget_adherence", "weight": 1.0 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "hotel_budget_ceiling",
+        "description": "Hotels must not exceed $200 per night.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "flight_budget_ceiling",
+        "description": "Domestic flights must not exceed $500; international flights must not exceed $1200.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "corporate_account_only",
+        "description": "All bookings must go through corporate travel accounts to earn loyalty points.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "analytical and detail-focused",
+    "notes": "Finance-conscious, manages corporate spending closely."
+  }
+]

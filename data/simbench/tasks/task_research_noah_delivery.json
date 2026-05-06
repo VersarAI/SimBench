@@ -1,0 +1,9 @@
+{
+  "task_id": "noah_logistics_delivery",
+  "domain": "research",
+  "description": "Plan how Noah Williams should order and receive new work equipment while traveling.",
+  "active_sims": ["noah_logistics", "noah_remote_work"],
+  "available_tools": ["vendor_search", "shipping_scheduler"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "medium"
+}

@@ -1,0 +1,9 @@
+{
+  "task_id": "communication_alexa_sponsor_email",
+  "domain": "communication",
+  "description": "Draft Alexa Morgan’s sponsor outreach email that supports her work objectives and wellness schedule.",
+  "active_sims": ["alexa_work", "alexa_health"],
+  "available_tools": ["email_client", "contact_manager", "calendar_view"],
+  "conflict_types": ["communication_conflict"],
+  "difficulty": "medium"
+}

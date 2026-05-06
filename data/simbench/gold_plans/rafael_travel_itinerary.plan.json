@@ -1,0 +1,41 @@
+{
+  "plan_id": "gold_rafael_travel_itinerary_v1",
+  "steps": [
+    {
+      "step_id": "step_1",
+      "tool": "cost_estimator",
+      "parameters": {
+        "trip_length_days": 3
+      },
+      "justification": "Determine total allowable spend per day."
+    },
+    {
+      "step_id": "step_2",
+      "tool": "activity_search",
+      "parameters": {
+        "criteria": {
+          "authentic_local_experiences": true,
+          "cost_range": "low_to_medium"
+        }
+      },
+      "justification": "Identify high-experience, budget-conscious activities."
+    },
+    {
+      "step_id": "step_3",
+      "tool": "itinerary_builder",
+      "parameters": {
+        "structure": "one flagship experience per day",
+        "remaining_time": "free or low-cost exploration"
+      },
+      "justification": "Balance experiential richness with budget discipline."
+    }
+  ],
+  "assumptions": [
+    "Free or low-cost attractions are available in the destination city.",
+    "Experiential value does not strictly correlate with high cost."
+  ],
+  "conflict_resolution": {
+    "strategy": "Constraint-dominant optimization",
+    "rationale": "The hard budget constraint must be satisfied first; experiential priorities are optimized within remaining budget."
+  }
+}

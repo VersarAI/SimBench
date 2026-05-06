@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sim",
+  "description": "Structured representation of a single user Sim (context facet).",
+  "type": "object",
+  "required": ["sim_id", "sim_type", "priorities", "constraints", "communication_style"],
+  "properties": {
+    "sim_id": {
+      "type": "string",
+      "description": "Unique identifier for this Sim (stable across tasks)."
+    },
+    "sim_type": {
+      "type": "string",
+      "description": "Semantic category of the Sim (e.g., work, health, family, hobby)."
+    },
+    "priorities": {
+      "type": "array",
+      "description": "Ordered or weighted priorities guiding decision-making.",
+      "items": {
+        "type": "object",
+        "required": ["name", "weight"],
+        "properties": {
+          "name": { "type": "string" },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Relative importance of this priority."
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "description": "Checkable constraints that must or should be satisfied.",
+      "items": {
+        "type": "object",
+        "required": ["constraint_id", "description", "severity"],
+        "properties": {
+          "constraint_id": { "type": "string" },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the constraint."
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["hard", "soft"],
+            "description": "Hard constraints must never be violated; soft constraints may be traded off."
+          }
+        }
+      }
+    },
+    "communication_style": {
+      "type": "string",
+      "description": "Expected tone/voice when generating language under this Sim."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Non-binding context or background information."
+    }
+  },
+  "additionalProperties": false
+}

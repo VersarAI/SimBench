@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://versarai.github.io/simguide/schemas/judge_output.schema.json",
+  "title": "SimBench Judge Output Schema",
+  "description": "Schema for LLM judge outputs for PA/IS with per-item breakdowns.",
+  "type": "object",
+  "required": ["PA", "IS", "pa_breakdown", "is_breakdown"],
+  "properties": {
+    "PA": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Weighted preference-adherence score over active Sim constraints."
+    },
+    "IS": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Interference score where 1.0 means no inactive-Sim interference."
+    },
+    "pa_breakdown": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sim_id",
+          "constraint_id",
+          "constraint_text",
+          "priority_weight",
+          "verdict",
+          "score",
+          "rationale"
+        ],
+        "properties": {
+          "sim_id": { "type": "string" },
+          "constraint_id": { "type": "string" },
+          "constraint_text": { "type": "string" },
+          "priority_weight": {
+            "type": "number",
+            "minimum": 0.0
+          },
+          "verdict": {
+            "type": "string",
+            "enum": ["yes", "partially", "no"]
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "rationale": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "is_breakdown": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sim_id",
+          "distinctive_preferences",
+          "influenced",
+          "score",
+          "evidence"
+        ],
+        "properties": {
+          "sim_id": { "type": "string" },
+          "distinctive_preferences": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "influenced": { "type": "boolean" },
+          "score": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "evidence": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

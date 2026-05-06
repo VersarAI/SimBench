@@ -1,0 +1,9 @@
+{
+  "task_id": "research_noah_supply_chain",
+  "domain": "research",
+  "description": "Design Noah Williams’s supply-chain research framework for a remote logistics pilot.",
+  "active_sims": ["noah_logistics", "noah_remote_work"],
+  "available_tools": ["research_database", "data_analysis", "logistics_tracker"],
+  "conflict_types": ["priority_conflict"],
+  "difficulty": "high"
+}

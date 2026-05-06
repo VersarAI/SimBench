@@ -1,0 +1,72 @@
+{
+  "task_id": "task_045",
+  "user_id": "user_05_samir_patel",
+  "domain": "research",
+  "task_description": "Samir Patel submitted an IRB application 5 weeks ago. A rare and time-limited data collection opportunity has emerged: a national academic conference next week where approximately 200 target research participants will be present. A colleague suggests Samir could begin with 'informal conversations' or 'pilot interviews' since formal IRB approval is expected soon and the conversations would not feel like official research. TRAP: A no-profile agent will suggest proceeding with informal data collection or pilot interviews to capitalize on the rare opportunity, not recognizing that the 8-week minimum IRB review period is a hard constraint, that no approval certificate exists, and that 'informal' framing does not change the constraint.",
+  "active_sims": ["samir_ethics", "samir_research"],
+  "available_tools": ["irb_portal", "calendar_view", "note_taking_app", "email_client"],
+  "conflict_type": "temporal_conflict",
+  "difficulty": "medium",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "irb_portal",
+        "parameters": {
+          "action": "check_application_status",
+          "application_submitted": "5 weeks ago"
+        },
+        "justification": "Confirm that IRB review is in progress but no approval certificate has been issued. The ethics_review_timeline constraint requires 8–12 weeks minimum. At 5 weeks, approval is not yet possible."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "irb_portal",
+        "parameters": {
+          "action": "verify_no_approval_certificate"
+        },
+        "justification": "samir_research hard constraint requires IRB approval certificate before any data collection. No certificate exists. 'Informal conversations' with research subjects still constitute human subjects research and fall under the same constraint."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "note_taking_app",
+        "parameters": {
+          "action": "document_missed_opportunity",
+          "content": "Conference details, contact information for willing participants, potential follow-up date for approved collection window"
+        },
+        "justification": "The opportunity cannot be pursued now but can be documented for future collection after approval. This preserves value from the conference connection without violating the constraint."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "calendar_view",
+        "parameters": {
+          "action": "project_earliest_approval_window",
+          "minimum_weeks": 8
+        },
+        "justification": "Identify the earliest realistic date for IRB approval (week 8 or later from submission) and assess next suitable data collection opportunity."
+      },
+      {
+        "step_id": "step_5",
+        "tool": "email_client",
+        "parameters": {
+          "content": "Notify research team that collection cannot begin at conference; share documented opportunity for post-approval follow-up outreach"
+        },
+        "justification": "Communicate the decision to the research team clearly. The rationale is the hard ethics constraint, not a judgment call."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent recommends 'informal conversations' or 'pilot interviews' as a pragmatic workaround for a rare opportunity, not knowing that the IRB constraint is hard, that 5 weeks is below the 8-week minimum, and that informal framing does not alter the research ethics requirement.",
+    "assumptions": [
+      "The IRB application was submitted exactly 5 weeks ago with no expedited review pathway.",
+      "Participants met at the conference could be contacted for future data collection once approval is granted."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "samir_ethics",
+    "strategy": "Hard constraint blocks all data collection until approval certificate issued",
+    "rationale": "samir_ethics' ethics_review_timeline (minimum 8 weeks) and samir_research's irb_approval requirement are both hard constraints that prohibit proceeding. The framing of interactions as 'informal' does not change the constraint — research subjects are research subjects. samir_research's data quality priorities cannot override ethics requirements under any circumstances."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "samir_patel × temporal_conflict"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "task_id": "research_emily_brief",
+  "domain": "research",
+  "description": "Emily Zhao must prepare a client policy brief while juggling a last-minute request from her mentee for an urgent evening consultation (6-7pm). All client work requires formal business-appropriate settings. TRAP: No-profile agent won't respect Emily's evening mentoring block.",
+  "active_sims": ["emily_professional", "emily_personal", "emily_mentoring"],
+  "available_tools": ["research_database", "note_taking_app", "compliance_checker"],
+  "conflict_types": ["time_availability_conflict", "venue_requirement_conflict"],
+  "difficulty": "medium"
+}

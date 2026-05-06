@@ -1,0 +1,9 @@
+{
+  "task_id": "research_jordan_policy_summary",
+  "domain": "research",
+  "description": "Summarize policy research for Jordan Chen in a way that balances corporate and family schedule implications.",
+  "active_sims": ["jordan_work", "jordan_family", "jordan_health"],
+  "available_tools": ["research_database", "note_taking_app", "calendar_view"],
+  "conflict_types": ["temporal_conflict"],
+  "difficulty": "medium"
+}

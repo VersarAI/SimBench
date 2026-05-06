@@ -1,0 +1,9 @@
+{
+  "task_id": "travel_jordan_marathon_route",
+  "domain": "travel",
+  "description": "Arrange Jordan Chen’s travel itinerary so he can attend a marathon event and capture scenic shots without disrupting his consulting commitments.",
+  "active_sims": ["jordan_health", "jordan_hobby", "jordan_work"],
+  "available_tools": ["travel_planner", "event_scheduler", "route_map"],
+  "conflict_types": ["temporal_conflict"],
+  "difficulty": "high"
+}

@@ -1,0 +1,9 @@
+{
+  "task_id": "communication_rafael_station_followup",
+  "domain": "communication",
+  "description": "Rafael Silva must follow up with local radio station contacts to pitch his travel series. Communication budget is minimal, but Rafael prefers minimal-digital, local-first approaches (in-person meetings, phone calls). Online collaboration platforms would violate his sustainability commitment. TRAP: No-profile agent suggests cloud tools to minimize communication costs.",
+  "active_sims": ["rafael_explorer", "rafael_budget", "rafael_sustainability"],
+  "available_tools": ["email_client", "budget_tracker", "contact_manager"],
+  "conflict_types": ["communication_method_conflict", "environmental_footprint_conflict"],
+  "difficulty": "medium"
+}

@@ -1,0 +1,9 @@
+{
+  "task_id": "alexa_calendar_investor_call",
+  "domain": "calendar",
+  "description": "Schedule a 60-minute investor call for Alexa Morgan with participants in three time zones.",
+  "active_sims": ["alexa_work", "alexa_health"],
+  "available_tools": ["calendar_view", "meeting_scheduler"],
+  "conflict_types": ["temporal_conflict"],
+  "difficulty": "medium"
+}

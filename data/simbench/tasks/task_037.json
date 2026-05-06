@@ -1,0 +1,55 @@
+{
+  "task_id": "task_037",
+  "user_id": "user_09_diana_osei",
+  "domain": "calendar",
+  "task_description": "The CEO of a regional hospital network has sent an urgent request for a joint strategic partnership meeting with Diana Osei, proposed for this Wednesday at 8:30am. The requester's assistant marks the meeting as time-sensitive and flags that senior executives at similar institutions are always available at that hour for C-suite discussions. TRAP: A no-profile agent will accept the 8:30am Wednesday slot, reasoning that the seniority of the requester and strategic importance of the meeting justify any scheduling adjustment.",
+  "active_sims": ["diana_work", "diana_personal"],
+  "available_tools": ["calendar_view", "meeting_scheduler", "email_client"],
+  "conflict_type": "temporal_conflict",
+  "difficulty": "medium",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "calendar_view",
+        "parameters": {
+          "time_window": "Wednesday 8:00–9:00am"
+        },
+        "justification": "Check the weekly therapy session hard constraint before accepting or proposing any Wednesday morning slot."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "meeting_scheduler",
+        "parameters": {
+          "excluded_window": "Wednesday 8:00–9:00am",
+          "search": "Wednesday 9:30am or later, or alternative days this week"
+        },
+        "justification": "Identify alternative slots that do not conflict with the therapy window hard constraint."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "email_client",
+        "parameters": {
+          "channel": "official_hospital_communications",
+          "content": "Decline 8:30am Wednesday slot; propose specific alternative times (e.g., Wednesday 10am or Thursday morning); no disclosure of the reason for unavailability"
+        },
+        "justification": "All external communications must go through official hospital channels. The declination must not reveal the nature of the constraint. The message tone should be authoritative and measured."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent accepts the 8:30am Wednesday slot because the requester is a CEO and the meeting is marked urgent, without knowing that 8–9am Wednesday is a non-negotiable, hard-blocked personal appointment.",
+    "assumptions": [
+      "Wednesday 8–9am is permanently blocked as a standing therapy appointment.",
+      "Alternative slots on Wednesday after 9am or on other weekdays are available."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "diana_personal",
+    "strategy": "Hard constraint blocks high-stakes scheduling regardless of requester seniority",
+    "rationale": "diana_personal has a hard constraint explicitly prohibiting high-stakes meetings or travel during the Wednesday 8–9am therapy window. This constraint cannot be overridden even by CEO-level external requests or strategic urgency framing. diana_work's reputational priorities are served by promptly offering strong alternative times via official channels."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "diana_osei × temporal_conflict"
+  }
+}

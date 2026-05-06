@@ -1,0 +1,9 @@
+{
+  "task_id": "calendar_noah_shipping_window",
+  "domain": "calendar",
+  "description": "Plan Noah Williams’s shipment and work check-in windows so logistics deadlines and remote work blocks do not conflict.",
+  "active_sims": ["noah_logistics", "noah_remote_work"],
+  "available_tools": ["calendar_view", "logistics_tracker", "meeting_scheduler"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "high"
+}

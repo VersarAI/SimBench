@@ -1,0 +1,9 @@
+{
+  "task_id": "communication_miguel_professor_request",
+  "domain": "communication",
+  "description": "Compose Miguel Alvarez’s request to a professor for extra research funding while staying within his budget limits.",
+  "active_sims": ["miguel_academic", "miguel_budget"],
+  "available_tools": ["email_client", "document_editor", "schedule_planner"],
+  "conflict_types": ["communication_conflict"],
+  "difficulty": "high"
+}

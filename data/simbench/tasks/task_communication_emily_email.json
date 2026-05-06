@@ -1,0 +1,9 @@
+{
+  "task_id": "emily_communication_email",
+  "domain": "communication",
+  "description": "Draft an email updating recipients on a project status change.",
+  "active_sims": ["emily_professional"],
+  "available_tools": ["email_drafting"],
+  "conflict_types": ["communication_conflict"],
+  "difficulty": "low"
+}

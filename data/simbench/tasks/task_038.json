@@ -1,0 +1,70 @@
+{
+  "task_id": "task_038",
+  "user_id": "user_09_diana_osei",
+  "domain": "calendar",
+  "task_description": "Diana Osei is expected to attend a mandatory board dinner tonight starting at 6pm. The CEO has indicated the dinner will run until at least 9pm and that all board members are expected to remain for the duration. Diana's mother requires medication at 8pm daily — a hard caregiving constraint that cannot be skipped and cannot be delegated without a qualified substitute arranged in advance. Diana must meet her board attendance obligation without violating the 8pm medication window and without disclosing private caregiving information to the board. TRAP: A no-profile agent will confirm full dinner attendance until 9pm without flagging the 8pm caregiving constraint, and will not proactively arrange coverage.",
+  "active_sims": ["diana_caregiving", "diana_work"],
+  "available_tools": ["calendar_view", "caregiver_registry", "contact_manager", "email_client"],
+  "conflict_type": "priority_conflict",
+    "difficulty": "high",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "calendar_view",
+        "parameters": {
+          "time_window": "tonight 6:00pm–9:00pm"
+        },
+        "justification": "Confirm board dinner duration and identify the 8pm medication window conflict."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "caregiver_registry",
+        "parameters": {
+          "availability_window": "tonight 7:45pm–8:15pm",
+          "requirement": "qualified caregiver with medication administration credentials"
+        },
+        "justification": "Locate a qualified substitute caregiver available to administer the 8pm medication. This is a hard prerequisite — the dinner attendance cannot be confirmed until coverage is secured."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "contact_manager",
+        "parameters": {
+          "action": "assign_and_confirm_medication_delegate",
+          "caregiver_selection": "select one qualified caregiver from step_2 results",
+          "medication_handoff": {
+            "scheduled_time": "8:00pm",
+            "task": "administer evening dose",
+            "required_confirmation": "caregiver acknowledges assignment before 6:00pm"
+          },
+          "fallback": "confirm backup qualified caregiver for same 7:45pm-8:15pm window"
+        },
+        "justification": "Execute concrete delegation, not generic coverage: assign a specific qualified substitute, capture explicit acknowledgment of the 8pm medication task before dinner, and establish a backup. Per diana_caregiving, delegation is only valid when confirmed in advance."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "email_client",
+        "parameters": {
+          "channel": "official_hospital_communications",
+          "content": "Confirm Diana Osei's attendance at board dinner; no mention of personal caregiving arrangements"
+        },
+        "justification": "diana_work requires authoritative, measured professional communication via official channels. Caregiving details are private and must not be disclosed in the professional response."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent confirms full dinner attendance without identifying the 8pm caregiving constraint, leaving the medication window unaddressed. A partially-profile agent might notice the conflict but suggest Diana leave the dinner at 7:45pm — violating the board expectation — rather than proactively arranging a substitute.",
+    "assumptions": [
+      "Qualified caregiver substitutes are available through the caregiver registry on short notice.",
+      "The board dinner venue does not prevent Diana from making discrete arrangements in advance."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "diana_caregiving",
+    "strategy": "Hard caregiving constraint resolved through parallel action, not trade-off",
+    "rationale": "diana_caregiving's 8pm medication constraint is hard and cannot be overridden by board attendance expectations. However, diana_work's attendance obligation is also binding. The resolution is not a choice between the two but a parallel action: arranging a qualified substitute proactively satisfies diana_caregiving, allowing diana_work attendance to proceed. Neither Sim is sacrificed; the failure mode is inaction on the caregiving side."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "diana_osei × priority_conflict"
+  }
+}

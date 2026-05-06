@@ -1,0 +1,9 @@
+{
+  "task_id": "samir_research_lit_review",
+  "domain": "research",
+  "description": "Plan how Samir Patel should conduct a literature review on a new research topic.",
+  "active_sims": ["samir_research", "samir_privacy"],
+  "available_tools": ["search_engine", "paper_database", "note_taking_app"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "medium"
+}

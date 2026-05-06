@@ -1,0 +1,40 @@
+{
+  "plan_id": "gold_priya_calendar_team_sync_v1",
+  "steps": [
+    {
+      "step_id": "step_1",
+      "tool": "calendar_view",
+      "parameters": {
+        "participants": "global_team",
+        "time_zones": ["NA", "EU", "Asia"]
+      },
+      "justification": "Collect availability across regions."
+    },
+    {
+      "step_id": "step_2",
+      "tool": "timezone_converter",
+      "parameters": {
+        "exclude_time_blocks": "18:00-21:00 Priya_local"
+      },
+      "justification": "Enforce hard personal evening constraint."
+    },
+    {
+      "step_id": "step_3",
+      "tool": "meeting_scheduler",
+      "parameters": {
+        "strategy": "rotating_fairness",
+        "meeting_times": "Alternate weekly across regions",
+        "duration": "60 minutes"
+      },
+      "justification": "Distribute inconvenience fairly among time zones."
+    }
+  ],
+  "assumptions": [
+    "Weekly cadence allows rotation to achieve fairness over time.",
+    "Team members are able to occasionally meet outside ideal hours."
+  ],
+  "conflict_resolution": {
+    "strategy": "Hard constraint with soft trade-off",
+    "rationale": "The personal no-meeting block is hard and must be respected; fairness is optimized via rotating meeting times outside that block."
+  }
+}

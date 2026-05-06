@@ -1,0 +1,62 @@
+[
+  {
+    "sim_id": "emily_professional",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "clarity", "weight": 0.5 },
+      { "name": "professional_tone", "weight": 0.5 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "business_venues_only",
+        "description": "All professional meetings must occur in business-appropriate settings (offices, hotels, conference centers). No casual venues (bars, coffee shops, parks).",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "formal and polished",
+    "notes": "Senior corporate role."
+  },
+  {
+    "sim_id": "emily_personal",
+    "sim_type": "family",
+    "priorities": [
+      { "name": "warmth", "weight": 1.0 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "emily_mother_appointments",
+        "description": "Must accompany mother to neurology appointments on the second Tuesday of each month, 2-4pm. Cannot schedule travel or external meetings during this window.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "emily_evening_availability",
+        "description": "Must be reachable by phone after 7pm on weekdays in case of mother's health incidents. Cannot attend multi-day off-site events without arranging a designated emergency contact.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "friendly and personal",
+    "notes": "Close relationships outside work. Primary family contact for mother's medical care."
+  },
+  {
+    "sim_id": "emily_mentoring",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "mentee_development", "weight": 0.8 },
+      { "name": "career_succession", "weight": 0.2 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "mentee_availability",
+        "description": "Must dedicate 2 evenings per week for mentee check-ins and one-on-ones (uninterrupted 1-hour slots, 5pm onwards).",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "mentorship_events",
+        "description": "Must attend at least 4 women-in-leadership conferences or mentorship summit events per year.",
+        "severity": "soft"
+      }
+    ],
+    "communication_style": "encouraging and thorough",
+    "notes": "Active mentor for junior female leaders. Executive sponsor of diversity initiatives."
+  }
+]

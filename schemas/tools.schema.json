@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://versarai.github.io/simguide/schemas/tools.schema.json",
+  "title": "SimBench Abstract Tools Schema",
+  "description": "Defines allowed parameter keys for abstract tools across multiple domains. Parameter values are free-form, but key names are fixed.",
+  "type": "object",
+
+  "definitions": {
+    "freeForm": {
+      "description": "Free-form value: may be a string or structured object.",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "object" }
+      ]
+    }
+  },
+
+  "properties": {
+    "travel": {
+      "type": "object",
+      "properties": {
+        "flight_search": {
+          "type": "object",
+          "required": ["origin", "destination", "dates"],
+          "properties": {
+            "origin": { "$ref": "#/definitions/freeForm" },
+            "destination": { "$ref": "#/definitions/freeForm" },
+            "dates": { "$ref": "#/definitions/freeForm" },
+            "preferences": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "hotel_search": {
+          "type": "object",
+          "required": ["location", "dates"],
+          "properties": {
+            "location": { "$ref": "#/definitions/freeForm" },
+            "dates": { "$ref": "#/definitions/freeForm" },
+            "preferences": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "book_flight": {
+          "type": "object",
+          "required": ["flight_id", "traveler_info"],
+          "properties": {
+            "flight_id": { "$ref": "#/definitions/freeForm" },
+            "traveler_info": { "$ref": "#/definitions/freeForm" },
+            "payment_info": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "book_hotel": {
+          "type": "object",
+          "required": ["hotel_id", "guest_info"],
+          "properties": {
+            "hotel_id": { "$ref": "#/definitions/freeForm" },
+            "guest_info": { "$ref": "#/definitions/freeForm" },
+            "payment_info": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "compare_options": {
+          "type": "object",
+          "required": ["options"],
+          "properties": {
+            "options": { "$ref": "#/definitions/freeForm" },
+            "comparison_criteria": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "calendar": {
+      "type": "object",
+      "properties": {
+        "calendar_view": {
+          "type": "object",
+          "required": ["time_range"],
+          "properties": {
+            "time_range": { "$ref": "#/definitions/freeForm" },
+            "participants": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "schedule_meeting": {
+          "type": "object",
+          "required": ["title", "time"],
+          "properties": {
+            "title": { "$ref": "#/definitions/freeForm" },
+            "time": { "$ref": "#/definitions/freeForm" },
+            "participants": { "$ref": "#/definitions/freeForm" },
+            "location": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "move_meeting": {
+          "type": "object",
+          "required": ["meeting_id", "new_time"],
+          "properties": {
+            "meeting_id": { "$ref": "#/definitions/freeForm" },
+            "new_time": { "$ref": "#/definitions/freeForm" },
+            "reason": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "check_conflicts": {
+          "type": "object",
+          "required": ["time_range"],
+          "properties": {
+            "time_range": { "$ref": "#/definitions/freeForm" },
+            "participants": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "communication": {
+      "type": "object",
+      "properties": {
+        "draft_message": {
+          "type": "object",
+          "required": ["content"],
+          "properties": {
+            "content": { "$ref": "#/definitions/freeForm" },
+            "context": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "set_tone": {
+          "type": "object",
+          "required": ["tone"],
+          "properties": {
+            "tone": { "$ref": "#/definitions/freeForm" },
+            "constraints": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "send_message": {
+          "type": "object",
+          "required": ["message"],
+          "properties": {
+            "message": { "$ref": "#/definitions/freeForm" },
+            "channel": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "select_recipients": {
+          "type": "object",
+          "required": ["recipients"],
+          "properties": {
+            "recipients": { "$ref": "#/definitions/freeForm" },
+            "exclusions": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "research": {
+      "type": "object",
+      "properties": {
+        "search_options": {
+          "type": "object",
+          "required": ["query"],
+          "properties": {
+            "query": { "$ref": "#/definitions/freeForm" },
+            "scope": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "filter_by_criteria": {
+          "type": "object",
+          "required": ["criteria"],
+          "properties": {
+            "criteria": { "$ref": "#/definitions/freeForm" },
+            "data": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "compare_options": {
+          "type": "object",
+          "required": ["options"],
+          "properties": {
+            "options": { "$ref": "#/definitions/freeForm" },
+            "metrics": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        },
+        "request_details": {
+          "type": "object",
+          "required": ["identifier"],
+          "properties": {
+            "identifier": { "$ref": "#/definitions/freeForm" },
+            "detail_level": { "$ref": "#/definitions/freeForm" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false
+}

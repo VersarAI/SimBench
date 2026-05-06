@@ -1,0 +1,63 @@
+[
+  {
+    "sim_id": "alexa_work",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "speed", "weight": 0.5 },
+      { "name": "availability", "weight": 0.5 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "slack_response_sla",
+        "description": "Must respond to Slack messages within 2 hours during work hours (8am-6pm local time).",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "direct and high-energy",
+    "notes": "Early-stage startup founder."
+  },
+  {
+    "sim_id": "alexa_health",
+    "sim_type": "health",
+    "priorities": [
+      { "name": "sleep_regularly", "weight": 0.6 },
+      { "name": "stress_reduction", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "no_meetings_after_9pm",
+        "description": "Avoid meetings after 9pm.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "limited_social_events",
+        "description": "Avoid multi-day conferences with evening social obligations. No bar outings or high-stress networking events.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "calm and grounding",
+    "notes": "Recovering from burnout."
+  },
+  {
+    "sim_id": "alexa_social",
+    "sim_type": "social",
+    "priorities": [
+      { "name": "network_building", "weight": 0.7 },
+      { "name": "industry_leadership", "weight": 0.3 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "conference_attendance",
+        "description": "Must attend at least 2 industry conferences per year with mandatory evening networking sessions.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "visibility_windows",
+        "description": "Schedule public appearances and podcast recordings during peak business hours for maximum engagement (10am-4pm).",
+        "severity": "soft"
+      }
+    ],
+    "communication_style": "dynamic and engaging",
+    "notes": "Needs to maintain founder visibility and build industry relationships."
+  }
+]

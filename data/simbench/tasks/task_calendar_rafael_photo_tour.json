@@ -1,0 +1,9 @@
+{
+  "task_id": "calendar_rafael_photo_tour",
+  "domain": "calendar",
+  "description": "Schedule Rafael Silva's photography day tour with local expert guide. Budget is tight ($50/day), but Rafael only books tours certified by tourism boards as sustainable. Cheapest option (vendor discount tour) lacks certification. TRAP: No-profile agent picks cheapest tour without knowing Rafael's sustainability constraint.",
+  "active_sims": ["rafael_explorer", "rafael_budget", "rafael_sustainability"],
+  "available_tools": ["calendar_view", "itinerary_builder", "notification_service"],
+  "conflict_types": ["budget_vs_values_conflict", "provider_selection_conflict"],
+  "difficulty": "medium"
+}

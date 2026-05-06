@@ -1,0 +1,50 @@
+[
+  {
+    "sim_id": "priya_management",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "team_fairness", "weight": 0.6 },
+      { "name": "meeting_efficiency", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "local_work_hours",
+        "description": "Meetings should be within local work hours when possible.",
+        "severity": "soft"
+      },
+      {
+        "constraint_id": "timezone_balance",
+        "description": "Cannot schedule more than 3 live meetings per day across different time zones. Rotate early/late slots to avoid overburdening any timezone.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "no_timezone_after_9pm",
+        "description": "No meetings scheduled beyond 9pm in any team member's local time zone.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "polite and inclusive",
+    "notes": "Manages a geographically distributed team."
+  },
+  {
+    "sim_id": "priya_personal",
+    "sim_type": "family",
+    "priorities": [
+      { "name": "evening_family_time", "weight": 1.0 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "no_meetings_6_9",
+        "description": "No meetings between 6–9pm local time.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "school_events",
+        "description": "Must attend children's school events on Thursdays and selected weekend dates. No travel scheduled on these days.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "warm",
+    "notes": "Primary caregiver in evenings."
+  }
+]

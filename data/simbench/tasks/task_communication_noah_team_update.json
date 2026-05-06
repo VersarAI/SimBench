@@ -1,0 +1,9 @@
+{
+  "task_id": "communication_noah_team_update",
+  "domain": "communication",
+  "description": "Prepare Noah Williams’s update to his remote team and logistics provider about changing shipment timings.",
+  "active_sims": ["noah_remote_work", "noah_logistics"],
+  "available_tools": ["messaging_platform", "logistics_tracker", "calendar_view"],
+  "conflict_types": ["communication_conflict"],
+  "difficulty": "high"
+}

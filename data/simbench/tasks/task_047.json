@@ -1,0 +1,69 @@
+{
+  "task_id": "task_047",
+  "user_id": "user_01_jordan_chen",
+  "domain": "communication",
+  "task_description": "Jordan Chen's flight home has been cancelled due to a storm, causing a 24-hour delay. The disruption affects two audiences who both need to be informed promptly: (1) a corporate client expecting Jordan at a 9am strategy session tomorrow — requires a formal, concise rescheduling message sent through corporate channels; (2) Jordan's spouse and children, who expected Jordan home by Friday 3pm for school pickup — requires a warm and reassuring message acknowledging the disappointment and confirming a revised return time. TRAP: A no-profile agent will draft a single message in Jordan's default professional register and adapt it minimally for both audiences, allowing formal language to bleed into the family message and informal warmth into the client message — or will send the same communication to both, treating the schedule change as a generic logistical update.",
+  "active_sims": ["jordan_work", "jordan_family"],
+  "available_tools": ["email_client", "contact_manager", "sms_sender"],
+  "conflict_type": "communication_conflict",
+  "difficulty": "medium",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "contact_manager",
+        "parameters": {
+          "retrieve": ["corporate_client_contact", "family_contact"],
+          "note": "retrieve separately to enforce channel discipline"
+        },
+        "justification": "Separating contacts at the outset enforces the distinct channels and drafting contexts. The two communications must be authored and reviewed in isolation."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "email_client",
+        "parameters": {
+          "account": "corporate",
+          "recipient": "client",
+          "tone": "formal and concise",
+          "content": "Acknowledge flight cancellation due to weather; propose a specific rescheduled time for the strategy session; one short paragraph; no personal or emotional language; close with professional sign-off"
+        },
+        "justification": "jordan_work communication style is formal and concise. Corporate email via work account. The client needs actionable information (new time) without personal context."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "sms_sender",
+        "parameters": {
+          "account": "personal",
+          "recipient": "family",
+          "tone": "warm and reassuring",
+          "content": "Acknowledge the disruption to Friday plans; express regret about missing school pickup; reassure about revised arrival; suggest a way to make it up; affectionate closing"
+        },
+        "justification": "jordan_family communication style is warm and reassuring. Personal SMS or informal message is appropriate. The family needs emotional acknowledgment and reassurance, not a logistics update."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "email_client",
+        "parameters": {
+          "action": "cross_contamination_review",
+          "check": "verify no formal register in family message; no warm/informal register in client message; verify channels are correct"
+        },
+        "justification": "A Sim-aware agent explicitly reviews both drafts for tone bleed before sending. This review step is what distinguishes a correctly-executed plan from a plausible but flawed one."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent drafts both messages with the same professional register (Jordan's default work style), sending a cold logistical update to family and potentially including informal language in the client message. The failure is treating communication as style-neutral when Jordan has two distinct Sims with incompatible communication styles for this audience split.",
+    "assumptions": [
+      "Jordan has separate corporate and personal messaging accounts.",
+      "The client is reachable by email; the family is reachable by SMS or personal message."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "context_dependent — each Sim governs its own communication",
+    "strategy": "Parallel Sim execution across communication contexts — neither overrides the other",
+    "rationale": "jordan_work governs the client communication (formal and concise, corporate channel). jordan_family governs the family communication (warm and reassuring, personal channel). The conflict is not about which Sim wins — it is about whether the agent correctly applies each Sim to its respective context. The failure mode is defaulting to one Sim's style for both, treating communication as a single undifferentiated task."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "jordan_chen × communication_conflict"
+  }
+}

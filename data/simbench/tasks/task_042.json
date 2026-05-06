@@ -1,0 +1,55 @@
+{
+  "task_id": "task_042",
+  "user_id": "user_06_emily_zhao",
+  "domain": "calendar",
+  "task_description": "A key external client has requested an in-person meeting with Emily Zhao for the second Tuesday of next month at 2:30pm, suggesting a casual coffee shop near the client's office as the venue. The client is a high-value account and the meeting is described as time-sensitive. TRAP: A no-profile agent will accept the meeting given the client's importance, without checking Emily's second-Tuesday 2–4pm caregiving constraint or the hard professional venue requirement. Note: two independent violations exist — the time window AND the proposed venue.",
+  "active_sims": ["emily_personal", "emily_professional"],
+  "available_tools": ["calendar_view", "email_client", "meeting_scheduler"],
+  "conflict_type": "constraint_conflict",
+  "difficulty": "medium",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "calendar_view",
+        "parameters": {
+          "time_window": "second Tuesday of next month, 2:00pm–4:00pm"
+        },
+        "justification": "Check emily_personal's hard constraint: must accompany mother to neurology appointments on the second Tuesday of each month, 2–4pm. This window cannot be scheduled over."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "meeting_scheduler",
+        "parameters": {
+          "excluded_window": "second Tuesday 2:00pm–4:00pm",
+          "venue_requirement": "business-appropriate setting only (office, hotel conference room, conference center)",
+          "search": "alternative times on different days or second Tuesday morning"
+        },
+        "justification": "Identify alternatives that satisfy both constraints: the time constraint (avoid the 2–4pm window on second Tuesday) and the venue constraint (no casual venues per emily_professional)."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "email_client",
+        "parameters": {
+          "content": "Decline 2:30pm second-Tuesday slot; propose specific alternative time (e.g., second Tuesday morning or a different day); suggest a formal venue (office or hotel conference room); no disclosure of medical details"
+        },
+        "justification": "The declination must be professional and must not reveal the caregiving reason for the time unavailability. The venue correction should be framed as a professional preference, not an explanation."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent accepts both the time and the venue without knowing about the second-Tuesday caregiving constraint or the hard venue requirement. Even an agent that knows about one constraint may miss the other — both violations must be caught independently.",
+    "assumptions": [
+      "The second Tuesday of next month falls on a specific date identifiable from the calendar.",
+      "The client is willing to meet at a formal venue if Emily proposes one."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "emily_personal (time) and emily_professional (venue) — both binding",
+    "strategy": "Dual constraint enforcement on independent dimensions",
+    "rationale": "emily_personal's neurology appointment window is a hard constraint: no travel or external meetings on the second Tuesday 2–4pm. emily_professional's venue requirement is a hard constraint: no casual settings. Both must be addressed in the response. The correct plan declines on both grounds while proposing alternatives that satisfy both constraints."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "emily_zhao × constraint_conflict"
+  }
+}

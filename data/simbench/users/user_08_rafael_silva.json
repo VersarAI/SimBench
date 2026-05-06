@@ -1,0 +1,67 @@
+[
+  {
+    "sim_id": "rafael_explorer",
+    "sim_type": "hobby",
+    "priorities": [
+      { "name": "cultural_experience", "weight": 0.6 },
+      { "name": "local_recommendations", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "local_businesses_only",
+        "description": "Prefer locally-owned restaurants, tour guides, and accommodations. Avoid international hotel chains and franchises when possible.",
+        "severity": "soft"
+      }
+    ],
+    "communication_style": "enthusiastic",
+    "notes": "Values immersive experiences."
+  },
+  {
+    "sim_id": "rafael_budget",
+    "sim_type": "finance",
+    "priorities": [
+      { "name": "stay_within_budget", "weight": 1.0 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "trip_budget_cap",
+        "description": "Total trip cost must not exceed budget.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "budget_tool_choices",
+        "description": "Use only budget travel platforms (hostelworld.com, couchsurfing, local recommendations). Avoid expensive travel booking sites with high commissions.",
+        "severity": "soft"
+      }
+    ],
+    "communication_style": "pragmatic",
+    "notes": "Self-funded travel."
+  },
+  {
+    "sim_id": "rafael_sustainability",
+    "sim_type": "values",
+    "priorities": [
+      { "name": "environmental_impact", "weight": 0.7 },
+      { "name": "community_benefit", "weight": 0.3 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "eco_friendly_transport",
+        "description": "Prefer public transit, biking, walking, or shared shuttles. Avoid single-occupancy rental cars and short-haul flights when alternatives exist.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "sustainable_tours",
+        "description": "Only book tours and experiences with documented eco-certifications or guides certified by tourism boards. No predatory wildlife experiences or mass-market day-trip mills.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "zero_single_use",
+        "description": "Carry reusable water bottle and avoid single-use plastics. Refuse plastic bags, straws, and containers.",
+        "severity": "soft"
+      }
+    ],
+    "communication_style": "principled and educational",
+    "notes": "Committed to sustainable travel and supporting local communities environmentally.  Ugh! Sustainability priorities often conflict with rock-bottom pricing."
+  }
+]

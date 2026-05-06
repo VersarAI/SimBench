@@ -1,0 +1,9 @@
+{
+  "task_id": "travel_miguel_field_trip",
+  "domain": "travel",
+  "description": "Plan Miguel Alvarez’s field trip for data collection so he can maximize academic value while staying within budget.",
+  "active_sims": ["miguel_academic", "miguel_budget"],
+  "available_tools": ["travel_planner", "note_taking_app", "budget_calculator"],
+  "conflict_types": ["priority_conflict"],
+  "difficulty": "low"
+}

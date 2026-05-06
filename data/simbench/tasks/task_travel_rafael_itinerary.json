@@ -1,0 +1,9 @@
+{
+  "task_id": "rafael_travel_itinerary",
+  "domain": "travel",
+  "description": "Plan a three-day travel itinerary for Rafael Silva in a new city.",
+  "active_sims": ["rafael_explorer", "rafael_budget"],
+  "available_tools": ["itinerary_builder", "activity_search", "cost_estimator"],
+  "conflict_types": ["priority_conflict", "constraint_conflict"],
+  "difficulty": "medium"
+}

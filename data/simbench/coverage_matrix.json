@@ -1,0 +1,1056 @@
+{
+  "generated_at_utc": "2026-04-23T18:19:37Z",
+  "task_count": 35,
+  "domains": [
+    "calendar",
+    "communication",
+    "research",
+    "travel"
+  ],
+  "conflict_types": [
+    "budget_vs_values_conflict",
+    "communication_conflict",
+    "communication_method_conflict",
+    "communication_style_conflict",
+    "constraint_conflict",
+    "cost_vs_sustainability_conflict",
+    "destination_selection_conflict",
+    "environmental_footprint_conflict",
+    "financial_vs_ethical_conflict",
+    "priority_conflict",
+    "provider_availability_conflict",
+    "provider_selection_conflict",
+    "temporal_conflict",
+    "time_availability_conflict",
+    "time_block_conflict",
+    "timezone_availability_conflict",
+    "venue_constraint_conflict",
+    "venue_requirement_conflict",
+    "work_life_balance_conflict"
+  ],
+  "users": [
+    "alexa",
+    "emily",
+    "jordan",
+    "miguel",
+    "noah",
+    "priya",
+    "rafael",
+    "samir"
+  ],
+  "tasks": [
+    {
+      "task_id": "alexa_calendar_investor_call",
+      "domain": "calendar",
+      "conflict_types": [
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "alexa"
+      ],
+      "sim_types_in_conflict": [
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "calendar_alexa_investor_prep",
+      "domain": "calendar",
+      "conflict_types": [
+        "priority_conflict"
+      ],
+      "users_involved": [
+        "alexa"
+      ],
+      "sim_types_in_conflict": [
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "calendar_emily_client_demo",
+      "domain": "calendar",
+      "conflict_types": [
+        "time_availability_conflict",
+        "venue_constraint_conflict"
+      ],
+      "users_involved": [
+        "emily"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "calendar_jordan_family_health",
+      "domain": "calendar",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "jordan"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "calendar_noah_shipping_window",
+      "domain": "calendar",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "noah"
+      ],
+      "sim_types_in_conflict": [
+        "personal",
+        "work"
+      ]
+    },
+    {
+      "task_id": "calendar_priya_training_review",
+      "domain": "calendar",
+      "conflict_types": [
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "priya"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "calendar_rafael_photo_tour",
+      "domain": "calendar",
+      "conflict_types": [
+        "budget_vs_values_conflict",
+        "provider_selection_conflict"
+      ],
+      "users_involved": [
+        "rafael"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "hobby",
+        "values"
+      ]
+    },
+    {
+      "task_id": "communication_alexa_sponsor_email",
+      "domain": "communication",
+      "conflict_types": [
+        "communication_conflict"
+      ],
+      "users_involved": [
+        "alexa"
+      ],
+      "sim_types_in_conflict": [
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "communication_emily_coach_feedback",
+      "domain": "communication",
+      "conflict_types": [
+        "communication_style_conflict",
+        "time_block_conflict"
+      ],
+      "users_involved": [
+        "emily"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "communication_miguel_professor_request",
+      "domain": "communication",
+      "conflict_types": [
+        "communication_conflict"
+      ],
+      "users_involved": [
+        "miguel"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "work"
+      ]
+    },
+    {
+      "task_id": "communication_noah_team_update",
+      "domain": "communication",
+      "conflict_types": [
+        "communication_conflict"
+      ],
+      "users_involved": [
+        "noah"
+      ],
+      "sim_types_in_conflict": [
+        "personal",
+        "work"
+      ]
+    },
+    {
+      "task_id": "communication_priya_vendor_notice",
+      "domain": "communication",
+      "conflict_types": [
+        "communication_conflict"
+      ],
+      "users_involved": [
+        "priya"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "communication_rafael_station_followup",
+      "domain": "communication",
+      "conflict_types": [
+        "communication_method_conflict",
+        "environmental_footprint_conflict"
+      ],
+      "users_involved": [
+        "rafael"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "hobby",
+        "values"
+      ]
+    },
+    {
+      "task_id": "emily_communication_email",
+      "domain": "communication",
+      "conflict_types": [
+        "communication_conflict"
+      ],
+      "users_involved": [
+        "emily"
+      ],
+      "sim_types_in_conflict": [
+        "work"
+      ]
+    },
+    {
+      "task_id": "jordan_calendar_weekend_return",
+      "domain": "calendar",
+      "conflict_types": [
+        "priority_conflict",
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "jordan"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "jordan_travel_sf_conference",
+      "domain": "travel",
+      "conflict_types": [
+        "constraint_conflict",
+        "priority_conflict"
+      ],
+      "users_involved": [
+        "jordan"
+      ],
+      "sim_types_in_conflict": [
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "miguel_travel_conference",
+      "domain": "travel",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "miguel"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "work"
+      ]
+    },
+    {
+      "task_id": "noah_logistics_delivery",
+      "domain": "research",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "noah"
+      ],
+      "sim_types_in_conflict": [
+        "personal",
+        "work"
+      ]
+    },
+    {
+      "task_id": "priya_calendar_personal_event",
+      "domain": "calendar",
+      "conflict_types": [
+        "timezone_availability_conflict",
+        "work_life_balance_conflict"
+      ],
+      "users_involved": [
+        "priya"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "priya_calendar_team_sync",
+      "domain": "calendar",
+      "conflict_types": [
+        "priority_conflict",
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "priya"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "rafael_travel_itinerary",
+      "domain": "travel",
+      "conflict_types": [
+        "constraint_conflict",
+        "priority_conflict"
+      ],
+      "users_involved": [
+        "rafael"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "hobby"
+      ]
+    },
+    {
+      "task_id": "research_alexa_health_trends",
+      "domain": "research",
+      "conflict_types": [
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "alexa"
+      ],
+      "sim_types_in_conflict": [
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "research_emily_brief",
+      "domain": "research",
+      "conflict_types": [
+        "time_availability_conflict",
+        "venue_requirement_conflict"
+      ],
+      "users_involved": [
+        "emily"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "research_jordan_policy_summary",
+      "domain": "research",
+      "conflict_types": [
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "jordan"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "research_miguel_data_pipeline",
+      "domain": "research",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "miguel"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "work"
+      ]
+    },
+    {
+      "task_id": "research_noah_supply_chain",
+      "domain": "research",
+      "conflict_types": [
+        "priority_conflict"
+      ],
+      "users_involved": [
+        "noah"
+      ],
+      "sim_types_in_conflict": [
+        "personal",
+        "work"
+      ]
+    },
+    {
+      "task_id": "research_rafael_destination_review",
+      "domain": "research",
+      "conflict_types": [
+        "destination_selection_conflict",
+        "financial_vs_ethical_conflict"
+      ],
+      "users_involved": [
+        "rafael"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "hobby",
+        "values"
+      ]
+    },
+    {
+      "task_id": "research_samir_grant_proposal",
+      "domain": "research",
+      "conflict_types": [
+        "communication_conflict"
+      ],
+      "users_involved": [
+        "samir"
+      ],
+      "sim_types_in_conflict": [
+        "privacy",
+        "work"
+      ]
+    },
+    {
+      "task_id": "samir_research_lit_review",
+      "domain": "research",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "samir"
+      ],
+      "sim_types_in_conflict": [
+        "privacy",
+        "work"
+      ]
+    },
+    {
+      "task_id": "travel_alexa_weekend_getaway",
+      "domain": "travel",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "alexa"
+      ],
+      "sim_types_in_conflict": [
+        "health",
+        "work"
+      ]
+    },
+    {
+      "task_id": "travel_jordan_marathon_route",
+      "domain": "travel",
+      "conflict_types": [
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "jordan"
+      ],
+      "sim_types_in_conflict": [
+        "health",
+        "hobby",
+        "work"
+      ]
+    },
+    {
+      "task_id": "travel_miguel_field_trip",
+      "domain": "travel",
+      "conflict_types": [
+        "priority_conflict"
+      ],
+      "users_involved": [
+        "miguel"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "work"
+      ]
+    },
+    {
+      "task_id": "travel_noah_remote_shoot",
+      "domain": "travel",
+      "conflict_types": [
+        "constraint_conflict"
+      ],
+      "users_involved": [
+        "noah"
+      ],
+      "sim_types_in_conflict": [
+        "personal",
+        "work"
+      ]
+    },
+    {
+      "task_id": "travel_priya_board_meeting",
+      "domain": "travel",
+      "conflict_types": [
+        "temporal_conflict"
+      ],
+      "users_involved": [
+        "priya"
+      ],
+      "sim_types_in_conflict": [
+        "family",
+        "work"
+      ]
+    },
+    {
+      "task_id": "travel_rafael_budget_expedition",
+      "domain": "travel",
+      "conflict_types": [
+        "cost_vs_sustainability_conflict",
+        "provider_availability_conflict"
+      ],
+      "users_involved": [
+        "rafael"
+      ],
+      "sim_types_in_conflict": [
+        "finance",
+        "hobby",
+        "values"
+      ]
+    }
+  ],
+  "summaries": {
+    "tasks_per_domain": {
+      "calendar": 10,
+      "communication": 7,
+      "research": 9,
+      "travel": 9
+    },
+    "tasks_per_conflict_type": {
+      "budget_vs_values_conflict": 1,
+      "communication_conflict": 6,
+      "communication_method_conflict": 1,
+      "communication_style_conflict": 1,
+      "constraint_conflict": 10,
+      "cost_vs_sustainability_conflict": 1,
+      "destination_selection_conflict": 1,
+      "environmental_footprint_conflict": 1,
+      "financial_vs_ethical_conflict": 1,
+      "priority_conflict": 7,
+      "provider_availability_conflict": 1,
+      "provider_selection_conflict": 1,
+      "temporal_conflict": 8,
+      "time_availability_conflict": 2,
+      "time_block_conflict": 1,
+      "timezone_availability_conflict": 1,
+      "venue_constraint_conflict": 1,
+      "venue_requirement_conflict": 1,
+      "work_life_balance_conflict": 1
+    },
+    "tasks_per_user": {
+      "alexa": 5,
+      "emily": 4,
+      "jordan": 5,
+      "miguel": 4,
+      "noah": 5,
+      "priya": 5,
+      "rafael": 5,
+      "samir": 2
+    },
+    "zero_coverage_user_conflict_type_combinations": [
+      {
+        "user": "alexa",
+        "conflict_type": "budget_vs_values_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "communication_method_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "communication_style_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "cost_vs_sustainability_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "destination_selection_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "environmental_footprint_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "financial_vs_ethical_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "provider_availability_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "provider_selection_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "time_availability_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "time_block_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "timezone_availability_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "venue_constraint_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "venue_requirement_conflict"
+      },
+      {
+        "user": "alexa",
+        "conflict_type": "work_life_balance_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "budget_vs_values_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "communication_method_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "constraint_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "cost_vs_sustainability_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "destination_selection_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "environmental_footprint_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "financial_vs_ethical_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "priority_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "provider_availability_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "provider_selection_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "temporal_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "timezone_availability_conflict"
+      },
+      {
+        "user": "emily",
+        "conflict_type": "work_life_balance_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "budget_vs_values_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "communication_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "communication_method_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "communication_style_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "cost_vs_sustainability_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "destination_selection_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "environmental_footprint_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "financial_vs_ethical_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "provider_availability_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "provider_selection_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "time_availability_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "time_block_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "timezone_availability_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "venue_constraint_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "venue_requirement_conflict"
+      },
+      {
+        "user": "jordan",
+        "conflict_type": "work_life_balance_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "budget_vs_values_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "communication_method_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "communication_style_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "cost_vs_sustainability_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "destination_selection_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "environmental_footprint_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "financial_vs_ethical_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "provider_availability_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "provider_selection_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "temporal_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "time_availability_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "time_block_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "timezone_availability_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "venue_constraint_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "venue_requirement_conflict"
+      },
+      {
+        "user": "miguel",
+        "conflict_type": "work_life_balance_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "budget_vs_values_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "communication_method_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "communication_style_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "cost_vs_sustainability_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "destination_selection_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "environmental_footprint_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "financial_vs_ethical_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "provider_availability_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "provider_selection_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "temporal_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "time_availability_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "time_block_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "timezone_availability_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "venue_constraint_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "venue_requirement_conflict"
+      },
+      {
+        "user": "noah",
+        "conflict_type": "work_life_balance_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "budget_vs_values_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "communication_method_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "communication_style_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "constraint_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "cost_vs_sustainability_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "destination_selection_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "environmental_footprint_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "financial_vs_ethical_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "provider_availability_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "provider_selection_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "time_availability_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "time_block_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "venue_constraint_conflict"
+      },
+      {
+        "user": "priya",
+        "conflict_type": "venue_requirement_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "communication_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "communication_style_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "temporal_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "time_availability_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "time_block_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "timezone_availability_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "venue_constraint_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "venue_requirement_conflict"
+      },
+      {
+        "user": "rafael",
+        "conflict_type": "work_life_balance_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "budget_vs_values_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "communication_method_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "communication_style_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "cost_vs_sustainability_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "destination_selection_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "environmental_footprint_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "financial_vs_ethical_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "priority_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "provider_availability_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "provider_selection_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "temporal_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "time_availability_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "time_block_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "timezone_availability_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "venue_constraint_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "venue_requirement_conflict"
+      },
+      {
+        "user": "samir",
+        "conflict_type": "work_life_balance_conflict"
+      }
+    ]
+  }
+}

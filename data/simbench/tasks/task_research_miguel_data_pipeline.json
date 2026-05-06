@@ -1,0 +1,9 @@
+{
+  "task_id": "research_miguel_data_pipeline",
+  "domain": "research",
+  "description": "Plan Miguel Alvarez’s data processing pipeline for an academic study under tight budget constraints.",
+  "active_sims": ["miguel_academic", "miguel_budget"],
+  "available_tools": ["research_database", "data_analysis", "budget_calculator"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "high"
+}

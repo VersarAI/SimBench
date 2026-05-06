@@ -1,0 +1,9 @@
+{
+  "task_id": "priya_calendar_team_sync",
+  "domain": "calendar",
+  "description": "Schedule a weekly team sync meeting for Priya Natarajan’s global team spanning North America, Europe, and Asia.",
+  "active_sims": ["priya_management", "priya_personal"],
+  "available_tools": ["calendar_view", "timezone_converter", "meeting_scheduler"],
+  "conflict_types": ["temporal_conflict", "priority_conflict"],
+  "difficulty": "high"
+}

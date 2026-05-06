@@ -1,0 +1,9 @@
+{
+  "task_id": "calendar_jordan_family_health",
+  "domain": "calendar",
+  "description": "Schedule Jordan Chen’s family health appointment and training sessions around his professional commitments.",
+  "active_sims": ["jordan_health", "jordan_family", "jordan_work"],
+  "available_tools": ["calendar_view", "health_tracker", "meeting_scheduler"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "medium"
+}

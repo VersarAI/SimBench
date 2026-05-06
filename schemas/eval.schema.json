@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvaluationSpec",
+  "description": "Specification of evaluation metrics and their applicability.",
+  "type": "object",
+  "required": ["metrics"],
+  "properties": {
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "plan_correctness": {
+          "type": "object",
+          "required": ["description", "weight"],
+          "properties": {
+            "description": { "type": "string" },
+            "weight": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "preference_adherence": {
+          "type": "object",
+          "required": ["description", "weight"],
+          "properties": {
+            "description": { "type": "string" },
+            "weight": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "interference_score": {
+          "type": "object",
+          "required": ["description", "weight"],
+          "properties": {
+            "description": { "type": "string" },
+            "weight": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "conflict_resolution_accuracy": {
+          "type": "object",
+          "required": ["description", "weight"],
+          "properties": {
+            "description": { "type": "string" },
+            "weight": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

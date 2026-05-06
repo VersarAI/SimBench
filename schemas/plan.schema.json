@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://versarai.github.io/simguide/schemas/plan.schema.json",
+  "title": "SimBench Plan Schema",
+  "description": "Schema defining a tool-step simulation plan and its conflict resolution behavior.",
+  "type": "object",
+  "required": ["plan_id", "steps", "assumptions", "conflict_resolution"],
+  "properties": {
+    "plan_id": {
+      "type": "string",
+      "description": "Unique identifier for the generated plan."
+    },
+    "steps": {
+      "type": "array",
+      "description": "Ordered sequence of tool invocations used to complete the task.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["step_id", "tool", "parameters", "justification"],
+        "properties": {
+          "step_id": {
+            "type": "string",
+            "description": "Unique identifier of this step within the plan."
+          },
+          "tool": {
+            "type": "string",
+            "description": "Tool name to invoke for this step."
+          },
+          "parameters": {
+            "type": "object",
+            "description": "Arguments passed to the selected tool as key-value entries.",
+            "required": [
+              "items"
+            ],
+            "properties": {
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "key",
+                    "value"
+                  ],
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "justification": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Optional short reason for selecting this tool at this step."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "description": "Any explicit assumptions made while composing the plan.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conflict_resolution": {
+      "type": "object",
+      "description": "Rules governing how conflicts between Sims are resolved.",
+      "required": ["strategy", "rationale"],
+      "properties": {
+        "strategy": {
+          "type": "string",
+          "description": "Conflict resolution strategy used by the plan. Use 'none' when no conflict exists."
+        },
+        "rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Explanation for why the chosen conflict resolution strategy is appropriate."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

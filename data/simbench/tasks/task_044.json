@@ -1,0 +1,71 @@
+{
+  "task_id": "task_044",
+  "user_id": "user_06_emily_zhao",
+  "domain": "calendar",
+  "task_description": "A women-in-leadership summit is scheduled for this Thursday evening 6–9pm. Emily has attended 2 such events this year and needs 4 total by year-end (a soft mentoring constraint she actively tracks). Her Thursday evening slot is also already committed to a mentee one-on-one — the mentee has a time-sensitive promotion decision this week and has explicitly told Emily the meeting cannot move. TRAP: A no-profile agent will recommend Emily attend the summit because it visibly supports her leadership identity and the annual attendance target is at risk, without recognizing that the mentee check-in is a hard constraint and the conference attendance goal is soft.",
+  "active_sims": ["emily_mentoring", "emily_professional"],
+  "available_tools": ["calendar_view", "email_client", "event_registry"],
+  "conflict_type": "priority_conflict",
+  "difficulty": "medium",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "calendar_view",
+        "parameters": {
+          "time_window": "Thursday evening 6:00pm–9:00pm"
+        },
+        "justification": "Confirm that the mentee one-on-one occupies Thursday evening and that the mentee has flagged it as immovable this week."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "calendar_view",
+        "parameters": {
+          "check": "hard vs soft constraint comparison — mentee check-in (hard, 2 evenings/week) vs summit attendance (soft, 4/year)"
+        },
+        "justification": "Explicitly resolve the priority: the mentee check-in is a hard constraint; the conference attendance goal is soft. Hard constraints are not negotiable regardless of external visibility value."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "email_client",
+        "parameters": {
+          "content": "Decline the summit for this instance; brief professional note to organizers"
+        },
+        "justification": "The summit must be declined this week. The decline does not abandon the annual goal — it defers one instance."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "event_registry",
+        "parameters": {
+          "search": "upcoming women-in-leadership events or equivalent summits before year-end",
+          "target": "identify 2 more qualifying events to reach 4 total"
+        },
+        "justification": "The soft constraint (4/year) is not abandoned — it is actively managed by identifying replacement events. Tracking this proactively is part of satisfying the spirit of the constraint."
+      },
+      {
+        "step_id": "step_5",
+        "tool": "calendar_view",
+        "parameters": {
+          "action": "block_future_event_slots",
+          "events": "next 2 qualifying WIL events"
+        },
+        "justification": "Pre-blocking calendar slots for the identified events ensures the annual target remains achievable."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent prioritizes the conference because of its visibility and the risk of missing the annual target, and suggests rescheduling or cancelling the mentee one-on-one — treating a soft annual target as more urgent than a hard weekly commitment to someone with a time-sensitive career decision.",
+    "assumptions": [
+      "At least 2 additional WIL summits or equivalent events occur before year-end.",
+      "The mentee's promotion decision timeline makes this week's check-in genuinely immovable."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "emily_mentoring (hard weekly constraint)",
+    "strategy": "Hard constraint outweighs soft constraint; soft goal deferred with active recovery plan",
+    "rationale": "emily_mentoring's 2-evenings/week uninterrupted check-ins are a hard constraint. The 4-WIL-events/year target is explicitly marked soft. When a hard and soft constraint conflict, the hard constraint wins unconditionally. The soft goal is not abandoned — it is deferred by identifying replacement events, preserving the annual target through proactive planning."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "emily_zhao × priority_conflict"
+  }
+}

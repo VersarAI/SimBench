@@ -1,0 +1,3 @@
+## SimBench Schema Arbitration Rules
+
+When multiple Sims issue competing constraints or preferences, SimBench resolves them using a fixed arbitration rule: **active Sim order matters first**, meaning Sims are evaluated in list order and earlier Sims have priority over later ones; **within a single Sim**, higher priority weights win when resolving soft conflicts; and **hard constraints always override soft priorities**, regardless of Sim order or weight. For example, if Sim A (listed first) prefers a 9am meeting and Sim B (listed second) prefers 10am, Sim A’s preference wins—unless Sim B has a hard constraint that they are unavailable before 10am, in which case the meeting is scheduled at 10am despite Sim A’s earlier position and preference weight.

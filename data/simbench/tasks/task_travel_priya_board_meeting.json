@@ -1,0 +1,9 @@
+{
+  "task_id": "travel_priya_board_meeting",
+  "domain": "travel",
+  "description": "Plan Priya Natarajan’s travel for a board meeting in another city while keeping her family routine stable.",
+  "active_sims": ["priya_management", "priya_personal"],
+  "available_tools": ["travel_planner", "calendar_view", "expense_tracker"],
+  "conflict_types": ["temporal_conflict"],
+  "difficulty": "medium"
+}

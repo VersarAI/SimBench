@@ -1,0 +1,9 @@
+{
+  "task_id": "communication_priya_vendor_notice",
+  "domain": "communication",
+  "description": "Notify Priya Natarajan’s vendor about a schedule adjustment while keeping internal management priorities intact.",
+  "active_sims": ["priya_management", "priya_personal"],
+  "available_tools": ["email_client", "supplier_portal", "calendar_view"],
+  "conflict_types": ["communication_conflict"],
+  "difficulty": "medium"
+}

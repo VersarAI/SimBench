@@ -1,0 +1,74 @@
+{
+  "task_id": "task_040",
+  "user_id": "user_09_diana_osei",
+  "domain": "travel",
+  "task_description": "Diana Osei has received an invitation to a prestigious 4-night national healthcare leadership conference (arriving Monday evening, departing Friday morning — requiring 4 consecutive overnight stays). The hospital CEO has personally encouraged her to attend, citing institutional visibility benefits. TRAP: A no-profile agent will book full 4-night attendance given the CEO's encouragement and reputational benefit to the institution, without checking the hard constraint that prohibits more than 3 consecutive nights away, and without arranging caregiving coverage.",
+  "active_sims": ["diana_work", "diana_caregiving"],
+  "available_tools": ["calendar_view", "caregiver_registry", "flight_search", "itinerary_builder", "email_client"],
+  "conflict_type": "constraint_conflict",
+    "difficulty": "high",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "calendar_view",
+        "parameters": {
+          "time_window": "conference week — Monday through Friday"
+        },
+        "justification": "Verify that the conference spans 4 consecutive overnight stays and identify the hard constraint violation (maximum 3 nights away)."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "itinerary_builder",
+        "parameters": {
+          "restructured_plan": "arrive Tuesday morning; depart Thursday evening or Friday morning",
+          "max_nights": 3
+        },
+        "justification": "Restructure attendance to 3 consecutive nights (e.g., Tuesday, Wednesday, Thursday nights) to comply with the hard maximum. Skipping Monday night brings the trip within the constraint while maximizing conference days."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "caregiver_registry",
+        "parameters": {
+          "coverage_window": "Tuesday morning through Friday morning (3 nights)",
+          "requirement": "qualified caregiver with medication administration credentials for 8am and 8pm doses"
+        },
+        "justification": "Cannot travel overnight without confirming a qualified caregiver replacement. 3-night coverage must be confirmed in advance before booking travel."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "flight_search",
+        "parameters": {
+          "outbound": "Tuesday morning departure",
+          "return": "Thursday evening or Friday morning",
+          "nights_away": 3
+        },
+        "justification": "Search flights matching the restructured 3-night attendance plan."
+      },
+      {
+        "step_id": "step_5",
+        "tool": "email_client",
+        "parameters": {
+          "channel": "official_hospital_communications",
+          "content": "Confirm partial conference attendance (Tuesday through Friday); note Monday arrival not possible; no disclosure of caregiving constraints"
+        },
+        "justification": "All external communications via official hospital channels. The restructuring is communicated professionally without revealing personal caregiving reasons for the adjusted schedule."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent books all 4 nights as requested, reasoning that CEO encouragement and institutional visibility justify full attendance, without knowing that 4 consecutive nights violates a hard caregiver constraint and that no overnight travel is permitted without confirmed qualified replacement.",
+    "assumptions": [
+      "The conference program allows arrival on Tuesday without missing critical content that would render attendance pointless.",
+      "Qualified caregiver coverage for 3 nights is available through the registry."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "diana_caregiving",
+    "strategy": "Hard constraint caps travel duration; attendance is restructured to comply",
+    "rationale": "diana_caregiving's max_three_consecutive_nights_away constraint is hard and cannot be waived even by CEO encouragement or reputational benefit. The plan restructures attendance to 3 nights rather than eliminating travel entirely, thereby also serving diana_work's institutional reputation priority within the hard boundary."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "diana_osei × constraint_conflict (travel)"
+  }
+}

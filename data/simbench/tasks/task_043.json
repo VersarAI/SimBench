@@ -1,0 +1,74 @@
+{
+  "task_id": "task_043",
+  "user_id": "user_06_emily_zhao",
+  "domain": "calendar",
+  "task_description": "Emily Zhao has a mandatory uninterrupted 1-hour mentee one-on-one scheduled for 8pm tonight — a committed evening slot per her mentoring hard constraint. At 8:20pm, the caregiver looking after her mother calls to report that her mother has fallen and is unresponsive to the caregiver's usual approach. Emily's personal Sim requires her to be reachable by phone after 7pm on weekdays for exactly this type of health incident. TRAP: A no-profile agent will either (a) ignore the caregiver call because the meeting is supposed to be uninterrupted, or (b) abruptly end the meeting without any plan to honor the mentoring commitment, failing to reschedule within the week.",
+  "active_sims": ["emily_personal", "emily_mentoring"],
+  "available_tools": ["phone_dialer", "calendar_view", "email_client", "meeting_scheduler"],
+  "conflict_type": "temporal_conflict",
+  "difficulty": "medium",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "phone_dialer",
+        "parameters": {
+          "action": "answer_incoming_call",
+          "caller": "mother's caregiver"
+        },
+        "justification": "emily_personal requires reachability after 7pm on weekdays for mother's health incidents. The call must be answered immediately regardless of the meeting's uninterrupted status — the safety constraint supersedes the meeting preference."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "phone_dialer",
+        "parameters": {
+          "action": "pause_mentee_check_in",
+          "message_to_mentee": "Family emergency — will explain and reschedule; apologies for the interruption"
+        },
+        "justification": "The uninterrupted meeting preference yields to the hard reachability safety constraint. The mentee is informed immediately; no medical detail needs to be shared."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "phone_dialer",
+        "parameters": {
+          "action": "assess_mother_health_incident",
+          "coordinate": "caregiver response; escalate to emergency services if needed"
+        },
+        "justification": "Address the health incident. emily_personal's duty is to be reachable and responsive, not merely to pick up the phone."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "meeting_scheduler",
+        "parameters": {
+          "action": "reschedule_mentee_check_in",
+          "window": "within same week (another evening slot)",
+          "requirement": "uninterrupted 1-hour block, 5pm or later"
+        },
+        "justification": "emily_mentoring's hard constraint of 2 evenings/week for check-ins must still be met. Rescheduling within the same week honors the constraint rather than forfeiting the slot."
+      },
+      {
+        "step_id": "step_5",
+        "tool": "email_client",
+        "parameters": {
+          "content": "Brief apology to mentee with confirmed rescheduled time; no medical details disclosed"
+        },
+        "justification": "Maintain the mentoring relationship and fulfill the rescheduling commitment with a prompt, considerate message."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent either treats the uninterrupted meeting hard constraint as absolute and ignores the call (safety failure), or ends the meeting without rescheduling (mentoring commitment failure). The correct plan honors both constraints through a triage-and-reschedule sequence.",
+    "assumptions": [
+      "An alternative evening slot exists in the same week for the rescheduled check-in.",
+      "The health incident does not prevent Emily from sending a brief rescheduling message later that evening."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "emily_personal",
+    "strategy": "Safety hard constraint overrides meeting preference; mentoring commitment satisfied by rescheduling",
+    "rationale": "emily_personal's after-7pm reachability for health incidents is a hard safety constraint — not a preference. The mentoring uninterrupted-meeting clause is also a hard constraint, but applies to meeting quality, not to overriding a safety emergency. The resolution is to interrupt, address the emergency, and reschedule within the week to satisfy emily_mentoring's coverage requirement."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "emily_zhao × temporal_conflict"
+  }
+}

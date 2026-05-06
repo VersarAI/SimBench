@@ -1,0 +1,78 @@
+[
+  {
+    "sim_id": "diana_work",
+    "sim_type": "work",
+    "priorities": [
+      { "name": "institutional_reputation", "weight": 0.6 },
+      { "name": "operational_efficiency", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "monthly_board_meeting_last_thursday",
+        "description": "Must attend monthly board meetings on the last Thursday of each month.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "official_external_channels_only",
+        "description": "All external communications must go through official hospital channels.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "committee_signoff_above_50k",
+        "description": "Cannot make unilateral decisions above $50K without committee sign-off.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "authoritative and measured",
+    "notes": "Senior hospital administrator reporting directly to the hospital CEO. High public visibility role."
+  },
+  {
+    "sim_id": "diana_caregiving",
+    "sim_type": "family",
+    "priorities": [
+      { "name": "mothers_safety", "weight": 0.7 },
+      { "name": "continuity_of_routine", "weight": 0.3 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "medication_8am_8pm_daily",
+        "description": "Mother requires medication administration at 8am and 8pm daily and this cannot be delegated without a qualified substitute arranged in advance.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "no_overnight_travel_without_replacement",
+        "description": "Cannot travel overnight without confirming a qualified caregiver replacement.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "max_three_consecutive_nights_away",
+        "description": "No back-to-back travel days exceeding 3 consecutive nights away.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "patient and protective",
+    "notes": "Mother has early-stage dementia and routine disruption causes significant distress. Diana is the sole family caregiver in the city."
+  },
+  {
+    "sim_id": "diana_personal",
+    "sim_type": "health",
+    "priorities": [
+      { "name": "stress_management", "weight": 0.6 },
+      { "name": "professional_longevity", "weight": 0.4 }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "weekly_therapy_wednesday_8_9am",
+        "description": "Must attend weekly therapy session on Wednesday mornings 8-9am as a non-negotiable standing appointment.",
+        "severity": "hard"
+      },
+      {
+        "constraint_id": "no_high_stakes_during_therapy_window",
+        "description": "No scheduling of high-stakes meetings or travel during the Wednesday 8-9am therapy window.",
+        "severity": "hard"
+      }
+    ],
+    "communication_style": "reflective and boundaried",
+    "notes": "Actively managing caregiver burnout. Therapy is non-negotiable self-preservation, not optional wellness."
+  }
+]

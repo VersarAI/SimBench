@@ -1,0 +1,71 @@
+{
+  "task_id": "task_036",
+  "user_id": "user_09_diana_osei",
+  "domain": "calendar",
+  "task_description": "Diana Osei has been invited to attend a prestigious 2-day National Hospital Administrators Conference. The conference falls on the last Thursday and Friday of next month; the organizer expects Diana to attend both days. The CEO has indicated that attendance would benefit the hospital's institutional reputation. TRAP: A no-profile agent will confirm both conference days and arrange travel without checking Diana's non-negotiable board meeting constraint on the last Thursday of every month, and without checking her overnight caregiving requirements.",
+  "active_sims": ["diana_work", "diana_caregiving"],
+  "available_tools": ["calendar_view", "caregiver_registry", "itinerary_builder", "email_client"],
+  "conflict_type": "constraint_conflict",
+    "difficulty": "high",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "calendar_view",
+        "parameters": {
+          "time_window": "last Thursday and Friday of next month"
+        },
+        "justification": "Identify whether the last Thursday of the month is occupied by the mandatory board meeting hard constraint."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "calendar_view",
+        "parameters": {
+          "check": "overnight travel caregiving coverage"
+        },
+        "justification": "Confirm that any overnight stay requires a qualified caregiver substitute arranged in advance per diana_caregiving hard constraint."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "itinerary_builder",
+        "parameters": {
+          "attendance": "Friday only",
+          "travel_mode": "same-day return trip (no overnight)"
+        },
+        "justification": "Board meeting on last Thursday is non-negotiable. A Friday-only day trip avoids both the board meeting conflict and any overnight caregiving substitution requirement."
+      },
+      {
+        "step_id": "step_4",
+        "tool": "caregiver_registry",
+        "parameters": {
+          "purpose": "verify no overnight substitution needed for day-trip plan"
+        },
+        "justification": "Confirm that the day-trip plan does not trigger the overnight caregiving constraint. If a same-day return is not logistically feasible, a qualified substitute must be confirmed before proceeding."
+      },
+      {
+        "step_id": "step_5",
+        "tool": "email_client",
+        "parameters": {
+          "channel": "official_hospital_communications",
+          "content": "Decline Thursday attendance; confirm Friday-only attendance via same-day travel plan"
+        },
+        "justification": "All external communications must go through official hospital channels per diana_work hard constraint. The declination of Thursday must be communicated professionally without disclosing caregiving reasons."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent accepts both conference days and books overnight travel for Thursday, violating the non-negotiable board meeting hard constraint and bypassing the overnight caregiving substitution requirement.",
+    "assumptions": [
+      "The last Thursday of next month coincides with the mandatory monthly board meeting.",
+      "A same-day return trip on Friday is logistically feasible from the conference city."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "diana_work",
+    "strategy": "Hard constraint override on scheduling",
+    "rationale": "The monthly board meeting on the last Thursday is a hard constraint under diana_work that cannot be overridden by any external invitation, regardless of reputational benefit. diana_caregiving further enforces that overnight travel requires a qualified substitute arranged in advance. The resolution restructures attendance to Friday-only day-trip, satisfying both the board meeting constraint and minimizing caregiving disruption."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "diana_osei × constraint_conflict"
+  }
+}

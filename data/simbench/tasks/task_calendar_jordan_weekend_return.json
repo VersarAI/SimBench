@@ -1,0 +1,9 @@
+{
+  "task_id": "jordan_calendar_weekend_return",
+  "domain": "calendar",
+  "description": "Reschedule Jordan Chen’s existing meetings to accommodate an unexpected requirement to be home early Friday afternoon.",
+  "active_sims": ["jordan_family", "jordan_work"],
+  "available_tools": ["calendar_view", "meeting_rescheduler"],
+  "conflict_types": ["temporal_conflict", "priority_conflict"],
+  "difficulty": "high"
+}

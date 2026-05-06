@@ -1,0 +1,9 @@
+{
+  "task_id": "travel_noah_remote_shoot",
+  "domain": "travel",
+  "description": "Organize Noah Williams’s travel and logistics for a remote field shoot that also supports his remote work schedule.",
+  "active_sims": ["noah_logistics", "noah_remote_work"],
+  "available_tools": ["travel_planner", "equipment_checklist", "site_survey"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "high"
+}

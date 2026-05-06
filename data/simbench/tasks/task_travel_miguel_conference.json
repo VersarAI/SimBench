@@ -1,0 +1,9 @@
+{
+  "task_id": "miguel_travel_conference",
+  "domain": "travel",
+  "description": "Plan travel for Miguel Alvarez to attend an academic workshop in another city next month.",
+  "active_sims": ["miguel_budget", "miguel_academic"],
+  "available_tools": ["flight_search", "train_search", "lodging_search"],
+  "conflict_types": ["constraint_conflict"],
+  "difficulty": "medium"
+}

@@ -1,0 +1,9 @@
+{
+  "task_id": "travel_rafael_budget_expedition",
+  "domain": "travel",
+  "description": "Design Rafael Silva's exploratory expedition with a hard $1,500 budget and strict sustainability requirements (public transport only, eco-certified accommodations, zero single-use plastics). Most eco-options are premium; most budget options are not eco-certified. TRAP: No-profile agent assumes eco-travel is always expensive luxury; doesn't find budget sustainable alternatives.",
+  "active_sims": ["rafael_budget", "rafael_explorer", "rafael_sustainability"],
+  "available_tools": ["travel_planner", "budget_calculator", "itinerary_builder"],
+  "conflict_types": ["cost_vs_sustainability_conflict", "provider_availability_conflict"],
+  "difficulty": "hard"
+}

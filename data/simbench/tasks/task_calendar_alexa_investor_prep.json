@@ -1,0 +1,9 @@
+{
+  "task_id": "calendar_alexa_investor_prep",
+  "domain": "calendar",
+  "description": "Schedule Alexa Morgan’s investor preparation sessions and recovery blocks alongside her regular work commitments.",
+  "active_sims": ["alexa_work", "alexa_health"],
+  "available_tools": ["calendar_view", "reminder_service", "meeting_scheduler"],
+  "conflict_types": ["priority_conflict"],
+  "difficulty": "high"
+}

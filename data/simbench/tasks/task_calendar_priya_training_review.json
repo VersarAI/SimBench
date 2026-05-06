@@ -1,0 +1,9 @@
+{
+  "task_id": "calendar_priya_training_review",
+  "domain": "calendar",
+  "description": "Arrange Priya Natarajan’s executive training review session without disrupting her personal family routine.",
+  "active_sims": ["priya_management", "priya_personal"],
+  "available_tools": ["calendar_view", "meeting_scheduler", "task_manager"],
+  "conflict_types": ["temporal_conflict"],
+  "difficulty": "low"
+}

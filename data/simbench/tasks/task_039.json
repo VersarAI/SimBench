@@ -1,0 +1,59 @@
+{
+  "task_id": "task_039",
+  "user_id": "user_09_diana_osei",
+  "domain": "communication",
+  "task_description": "On the same afternoon, Diana Osei must send two separate communications: (1) a response to a journalist's media inquiry about the hospital's new patient triage policy — requiring authoritative external tone routed through official hospital communications infrastructure; (2) a message to her mother's neurologist's office requesting an adjustment to her mother's medication schedule — requiring a patient and protective caregiving tone sent through a personal channel. TRAP: A no-profile agent will draft both messages in the same authoritative professional register, or route both through official hospital channels, inappropriately involving institutional communications infrastructure in a private caregiving matter — or worse, signing the caregiving message as a hospital representative.",
+  "active_sims": ["diana_work", "diana_caregiving"],
+  "available_tools": ["email_client", "official_comms_portal", "contact_manager"],
+  "conflict_type": "communication_conflict",
+  "difficulty": "medium",
+  "gold_plan": {
+    "steps": [
+      {
+        "step_id": "step_1",
+        "tool": "official_comms_portal",
+        "parameters": {
+          "recipient": "journalist",
+          "tone": "authoritative and measured",
+          "content": "Formal response to media inquiry on patient triage policy; factual, institutional language; signed as hospital representative"
+        },
+        "justification": "diana_work hard constraint requires all external communications go through official hospital channels. Authoritative and measured tone is required for press communications representing the institution."
+      },
+      {
+        "step_id": "step_2",
+        "tool": "contact_manager",
+        "parameters": {
+          "lookup": "mother's neurologist office",
+          "channel": "personal direct contact"
+        },
+        "justification": "The neurologist communication is a private caregiving matter and must be sent via personal channels — not official hospital infrastructure. Routing it through hospital systems would inappropriately associate Diana's personal caregiving role with her institutional identity."
+      },
+      {
+        "step_id": "step_3",
+        "tool": "email_client",
+        "parameters": {
+          "account": "personal",
+          "recipient": "neurologist office",
+          "tone": "patient and protective",
+          "content": "Request to review and adjust mother's medication schedule; written as a family caregiver, not as hospital administrator; warm and considerate language"
+        },
+        "justification": "diana_caregiving communication style is patient and protective. The message is personal in nature and must not carry institutional authority or formal register."
+      }
+    ],
+    "no_profile_trap": "A no-profile agent drafts both messages in the same authoritative professional tone and sends both through official hospital channels, violating the channel constraint for the caregiving message and creating a tone mismatch that could be perceived as cold or bureaucratic in a sensitive medical context.",
+    "assumptions": [
+      "Diana has separate personal and institutional email accounts.",
+      "The neurologist's office contact information is available through personal contacts, not hospital systems."
+    ]
+  },
+  "conflict_resolution": {
+    "winning_sim": "context_dependent",
+    "strategy": "Sim-scoped parallel execution — each Sim governs its own communication independently",
+    "rationale": "diana_work governs the press communication (official channels, authoritative tone required); diana_caregiving governs the neurologist communication (personal channel, patient and protective tone required). Neither Sim overrides the other — they each apply to their respective communication. The failure mode is applying one Sim's communication style and channel rules to the other's context."
+  },
+  "metadata": {
+    "added_in_batch": "expansion_v2",
+    "generated_date": "2026-04-23",
+    "covers_gap": "diana_osei × communication_conflict"
+  }
+}

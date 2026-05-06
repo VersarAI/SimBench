@@ -1,0 +1,9 @@
+{
+  "task_id": "jordan_travel_sf_conference",
+  "domain": "travel",
+  "description": "Plan travel and lodging for Jordan Chen to attend a three-day conference in San Francisco next week.",
+  "active_sims": ["jordan_work", "jordan_health"],
+  "available_tools": ["flight_search", "hotel_search", "itinerary_builder"],
+  "conflict_types": ["priority_conflict", "constraint_conflict"],
+  "difficulty": "medium"
+}

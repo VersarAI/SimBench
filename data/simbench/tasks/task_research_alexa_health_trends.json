@@ -1,0 +1,9 @@
+{
+  "task_id": "research_alexa_health_trends",
+  "domain": "research",
+  "description": "Analyze health trend data for Alexa Morgan’s workplace wellness program while keeping her work responsibilities manageable.",
+  "active_sims": ["alexa_health", "alexa_work"],
+  "available_tools": ["research_database", "analytics_tool", "note_taking_app"],
+  "conflict_types": ["temporal_conflict"],
+  "difficulty": "low"
+}

@@ -1,0 +1,9 @@
+{
+  "task_id": "priya_calendar_personal_event",
+  "domain": "calendar",
+  "description": "Priya Natarajan needs to schedule a personal school event for her children (Thursday 3-5pm local time) but also manages her team across three time zones. She has critical dependent team meetings Mon-Wed at 10am-noon PST and 3-5pm IST. She can only schedule personal time when both zones are free. TRAP: No-profile agent ignores Priya's requirement to balance timezone-aware meeting limit with global team management.",
+  "active_sims": ["priya_management", "priya_personal"],
+  "available_tools": ["calendar_view", "meeting_rescheduler"],
+  "conflict_types": ["timezone_availability_conflict", "work_life_balance_conflict"],
+  "difficulty": "hard"
+}
