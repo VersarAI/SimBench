@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#131c2e"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <radialGradient id="personGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7a9cc8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7a9cc8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="280" fill="url(#bg)"/>
+  <rect x="540" y="0" width="660" height="280" fill="url(#dots)"/>
+
+  <!-- Top accent bar: four sim-type colors -->
+  <rect x="0"   y="0" width="300" height="3" fill="#4A90D9"/>
+  <rect x="300" y="0" width="300" height="3" fill="#50C878"/>
+  <rect x="600" y="0" width="300" height="3" fill="#FF7F50"/>
+  <rect x="900" y="0" width="300" height="3" fill="#9B59B6"/>
+
+  <!-- Vertical divider -->
+  <line x1="540" y1="0" x2="540" y2="280" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+
+  <!-- LEFT: Text -->
+  <!-- Blue accent bar beside title -->
+  <rect x="60" y="50" width="5" height="88" rx="2" fill="#4A90D9"/>
+
+  <!-- Title -->
+  <text x="78" y="103" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800" fill="#ffffff" letter-spacing="-1">SimBench</text>
+
+  <!-- Subtitle -->
+  <text x="79" y="135" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#6b7f99" letter-spacing="0.2">Preference-Conditioned Agentic Planning</text>
+
+  <!-- Separator -->
+  <line x1="79" y1="155" x2="470" y2="155" stroke="#1e2d44" stroke-width="1"/>
+
+  <!-- Description -->
+  <text x="79" y="179" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#4e6280">A Sim captures one facet of a person — work, health, family,</text>
+  <text x="79" y="199" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#4e6280">finance, and more. Every user has many Sims. Tasks activate</text>
+  <text x="79" y="219" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#4e6280">multiple Sims and require agents to reason across them.</text>
+
+  <!-- Stats row -->
+  <circle cx="79"  cy="246" r="4" fill="#4A90D9"/>
+  <circle cx="97"  cy="246" r="4" fill="#50C878"/>
+  <circle cx="115" cy="246" r="4" fill="#FF7F50"/>
+  <circle cx="133" cy="246" r="4" fill="#9B59B6"/>
+  <text x="150" y="251" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#3a4f6a">47 tasks · 9 users · 4 domains</text>
+
+  <!-- RIGHT: Visual — person at (865, 135), nodes at corners -->
+
+  <!-- Glow behind person -->
+  <circle cx="865" cy="135" r="62" fill="url(#personGlow)"/>
+
+  <!-- Dashed connection lines (drawn first, under nodes and person) -->
+  <line x1="865" y1="135" x2="700" y2="72"  stroke="#4A90D9" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="5,4"/>
+  <line x1="865" y1="135" x2="1030" y2="72" stroke="#50C878" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="5,4"/>
+  <line x1="865" y1="135" x2="700" y2="208"  stroke="#FF7F50" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="5,4"/>
+  <line x1="865" y1="135" x2="1030" y2="208" stroke="#9B59B6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="5,4"/>
+
+  <!-- Person: head -->
+  <circle cx="865" cy="108" r="22" fill="#dce7f5"/>
+  <!-- Person: body (shoulders to waist) -->
+  <path d="M843,132 Q851,127 865,127 Q879,127 887,132 L893,180 L837,180 Z" fill="#dce7f5"/>
+
+  <!-- "one person · many Sims" label -->
+  <text x="865" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#ffffff" fill-opacity="0.28" letter-spacing="0.5">one person · many Sims</text>
+
+  <!-- Sim nodes -->
+
+  <!-- Work (top-left, blue) -->
+  <circle cx="700" cy="72" r="38" fill="#0d1117" stroke="#4A90D9" stroke-width="2"/>
+  <circle cx="700" cy="72" r="33" fill="#4A90D9" fill-opacity="0.1"/>
+  <text x="700" y="67" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#4A90D9">W</text>
+  <text x="700" y="85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#4A90D9" letter-spacing="0.5">Work</text>
+
+  <!-- Health (top-right, green) -->
+  <circle cx="1030" cy="72" r="38" fill="#0d1117" stroke="#50C878" stroke-width="2"/>
+  <circle cx="1030" cy="72" r="33" fill="#50C878" fill-opacity="0.1"/>
+  <text x="1030" y="67" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#50C878">+</text>
+  <text x="1030" y="85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#50C878" letter-spacing="0.5">Health</text>
+
+  <!-- Family (bottom-left, orange) -->
+  <circle cx="700" cy="208" r="38" fill="#0d1117" stroke="#FF7F50" stroke-width="2"/>
+  <circle cx="700" cy="208" r="33" fill="#FF7F50" fill-opacity="0.1"/>
+  <text x="700" y="203" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#FF7F50">F</text>
+  <text x="700" y="221" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#FF7F50" letter-spacing="0.5">Family</text>
+
+  <!-- Finance (bottom-right, purple) -->
+  <circle cx="1030" cy="208" r="38" fill="#0d1117" stroke="#9B59B6" stroke-width="2"/>
+  <circle cx="1030" cy="208" r="33" fill="#9B59B6" fill-opacity="0.1"/>
+  <text x="1030" y="203" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#9B59B6">$</text>
+  <text x="1030" y="221" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#9B59B6" letter-spacing="0.5">Finance</text>
+</svg>

@@ -1,5 +1,7 @@
 # SimBench
 
+![SimBench banner](banner.svg)
+
 **SimBench** is a benchmark for evaluating *preference-conditioned agentic planning* — the ability of an AI agent to produce different, correct plans for the same task depending on which user's preferences and constraints are active.
 
 The core idea: instead of representing a user as a flat profile or a bag of retrieved facts, SimBench represents users as a set of **Sims** — structured, typed context facets (e.g. `jordan_work`, `jordan_health`, `jordan_family`). A task activates one or more Sims in priority order, and the correct plan depends on which Sims are active and how their conflicts are resolved.
