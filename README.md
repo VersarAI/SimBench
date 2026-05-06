@@ -1,5 +1,3 @@
-# SimBench
-
 ![SimBench banner](banner.svg)
 
 **SimBench** is a benchmark for evaluating *preference-conditioned agentic planning* — the ability of an AI agent to produce different, correct plans for the same task depending on which user's preferences and constraints are active.
